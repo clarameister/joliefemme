@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(241,212,212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    margin:0px;
+}
+#retangulo1
+{
+    height:120px;
+    width: 707px;
+    color: rgb(211, 153, 153, 1);
+}

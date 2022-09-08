@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jolie Femme</title>
+</head>
+<body>
+    <div class="retangulo1">
+            <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+            <input type="file" id="meu_upload">
+    </div>
+                   <table border="1">
+                           <thead>
+                               <tr>
+                                   <th>Funcionário:</th>
+                                   <th>Horas Trabalhadas:</th>
+                                   <th>Horas Extras:</th>
+                               </tr>
+                           </thead>
+                       </table>
+</body>
+<style>
+        #meu_upload
+        {
+            display:none;
+        }
+        </style>
+<script src="jquery.js"></script>
+<script>
+     var db = openDatabase('APP2','v1','Base de usuários',2*1024*1024);
+
+db.transaction(function(tx)
+{
+    tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios(login VARCHAR(10) PRIMARY KEY , senha VARCHAR(5), cpf CHAR(11), telefone VARCHAR(15), email VARCHAR(60), imagem text)');
+
+})
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
+</script>
+</html>

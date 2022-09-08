@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jolie Femme</title>
+</head>
+<body>
+    <div class="retangulo1">
+            <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+            <input type="file" id="meu_upload">
+    </div>
+    <p>
+         Meus funcionários
+        </p>
+        <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nome:</th>
+                            <th>E-mail:</th>
+                            <th>Telefone:</th>
+                        </tr>
+                    </thead>
+                </table>
+                <button onclick="Excluir();" class="foto">
+                            EXCLUIR
+                </button>         
+</body>
+<style>
+#meu_upload
+{
+    display:none;
+}
+</style>
+<script src="jquery.js"></script>
+<script>
+        var db = openDatabase('APP2','v1','Base de usuários',2*1024*1024);
+
+db.transaction(function(tx)
+{
+    tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios(login VARCHAR(10) PRIMARY KEY , senha VARCHAR(5), cpf CHAR(11), telefone VARCHAR(15), email VARCHAR(60), imagem text)');
+
+})
+var caminho=""
+    function Inserir()
+    {
+        db.transaction(function(tx)
+        {
+            tx.executeSql('INSERT INTO usuarios(login,senha) VALUES(?,?)',[login.value,senha.value]);
+            location.reload();
+        })
+    }
+
+    $(document).on("change", "#meu_upload", function(e) 
+    {
+        showThumbnail(this.files);
+    });
+
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+               caminho= e.target.result;
+
+               db.transaction(function(tx)
+                {
+                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
+                })
+
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+function busca_imagem()
+{
+    meu_upload.click();
+}
+    $(document).on("change", "#meu_upload", function(e) {
+        showThumbnail(this.files);
+    });
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+                caminho= e.target.result;
+
+               db.transaction(function(tx)
+                {
+                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
+                })
+
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+
+    function Excluir(C)
+    {
+        db.transaction(function(tx)
+        {
+            tx.executeSql('DELETE FROM pedidos WHERE cod=?',[C]);
+            location.reload();
+        })
+    }
+
+    function Pesquisar()
+    {
+        db.transaction(function(tx)
+        {
+            var consulta = 'SELECT * FROM pedidos';
+            tx.executeSql(consulta,[], function(tx,resultados)
+            {   
+                // Pegando o número de linhas retornado:
+                var linhas = resultados.rows.length;
+                if (linhas==0)
+                {
+                    alert("NÃO ENCONTRADO");
+                }
+               
+                var t = ""
+                var c = ""
+                var pro = ""
+                var pre = ""
+
+
+                 // Percorrendo cada linha:
+                for(i=0; i<linhas; i++)
+                {
+                    // Vamos pegar as colunas e jogar cada uma dentro de uma DIV:
+                     c = resultados.rows.item(i).cod
+                     pro = resultados.rows.item(i).produto
+                     pre = parseFloat(resultados.rows.item(i).preco);
+                     pre = (Math.round(pre * 100) / 100).toFixed(2);
+                     
+                    t = t + "<div class='linha'>"
+                    t = t + "<div class=codigo>" + c + "</div>"
+                    t = t + "<div class='produto'>" + pro + "</div>"
+                    t = t + "<div class='preco'>" + pre + "</div>"
+                    t = t + "<img src='x.png' width='20px' height='20px' onclick=\"Excluir("+c+");\"></div>" 
+                }
+                
+                listagem.innerHTML = t
+            });
+        })
+    }
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
+
+</script>
+</html>

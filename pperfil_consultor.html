@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jolie Femme</title>
+</head>
+<body>
+        <div class="retangulo1">
+                <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+                <input type="file" id="meu_upload">
+                <button onclick="Sair();">
+                Log out
+                </button>
+        </div>
+        <div class="retangulo2">
+                <img onclick="abrir_pagina();" id="imagem" src="caixa.png" width="50px">
+                Pedidos
+                <img onclick="abrir_pagina();" id="imagem" src="calendario.png" width="50px">
+                Minha carga horária
+                <img onclick="abrir_pagina();" id="imagem" src="carta.png" width="50px">
+                Minhas mensagens
+                <img onclick="abrir_pagina();" id="imagem" src="calendario.png" width="50px">
+                Minhas consultas
+                <img onclick="abrir_pagina();" id="imagem" src="devolucao.png" width="50px">
+                Devolução
+        </div>
+        Meus dados <img onclick="Alterar();" id="imagem" src="pencil.png" width="50px">
+        <div id="nm"> 
+                NOME <input type="text" id="nome"> 
+            </div> 
+            <div id="em">
+                E-MAIL <input type="text" id="email">
+            </div>
+            <div id="sn">
+                SENHA <input type="text" id="senha"> 
+            </div>
+            <div id="tl">
+                TELEFONE <input type="text" id="telefone"> 
+            </div>
+            <div id="cpf">
+                CPF <input type="text" id="cpf">
+            </div>
+            <div id="ed">
+                ENDEREÇO <input type="text" id="endereco">
+            </div>
+</body>
+<style>
+body
+{
+    background-color: rgba(241, 212, 212, 1);
+}
+#meu_upload
+{
+     display:none;
+}
+</style>
+<script src="jquery.js"></script>
+<script>
+        var db = openDatabase('APP2','v1','Base de usuários',2*1024*1024);
+
+db.transaction(function(tx)
+{
+    tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios(login VARCHAR(10) PRIMARY KEY , senha VARCHAR(5), cpf CHAR(11), telefone VARCHAR(15), email VARCHAR(60), imagem text)');
+
+})
+$(document).on("change", "#meu_upload", function(e) 
+    {
+        showThumbnail(this.files);
+    });
+
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+               caminho= e.target.result;
+
+               db.transaction(function(tx)
+                {
+                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
+                })
+
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+    function Alterar()
+    {
+        db.transaction(function(tx)
+        {
+            tx.executeSql('UPDATE usuarios SET senha=? WHERE login=?',[senha.value,login.value]);
+            location.reload();
+        })
+    }
+function busca_imagem()
+{
+    meu_upload.click();
+}
+    $(document).on("change", "#meu_upload", function(e) {
+        showThumbnail(this.files);
+    });
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+                caminho= e.target.result;
+
+               db.transaction(function(tx)
+                {
+                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
+                })
+
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+    function abrir_pagina(arquivo)
+{
+    window.open(arquivo+"?usuario="+usuario,"_self")
+}
+
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
+
+</script>
+</html>

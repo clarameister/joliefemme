@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <title>Jolie Femme</title>
     <link rel="stylesheet" href="pinicial.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="retangulo1">
         JOLIE FEMME
-        <img src="logotipo.png" width="100px">
-        <img src="carrinho.png" width="50px">
-        <img src="icone-perfil.png" width="50px">
+        <img src="logotipo.png" class="logotipo" width="100px">
+        <img src="carrinho.png" class="carrinho"width="50px">
+    <img src="icone-perfil.png" class="icone" width="50px">
     </div>
 
     <div class="retangulo2">
 
         BLUSAS VESTIDOS SAIAS SHORTS CALÇAS CASACOS SAPATOS BOLSAS 
         <input id="searchbar" onkeyup="search_items()" type="text" name="search" placeholder="Pesquisar..">
-        <script src="./items.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
         <img src="lupa.png" width="60px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
 
     </div>

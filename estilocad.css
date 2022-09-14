@@ -1,0 +1,66 @@
+body
+{
+    background-color: #F1D4D4;
+    overflow: hidden;
+}
+#img
+{
+    padding-top: 222px;
+    padding-left: 14px;
+}
+#ret1
+{
+    width: 534px;
+    background-color: #D39999;
+    height: 100vh;
+    padding-bottom: 46px;
+    margin-top: -9px;
+    margin-left: -10px;
+}
+#cc
+{
+    color: #874C4C;
+    font-size: 25px;
+    margin-left: 983px;
+    margin-top: -698px;
+}
+#campos
+{
+    margin-top: -748px;
+    margin-left: 780px;
+    color: #874C4C;
+    font-size: 20px;
+}
+input[type=text] 
+{
+    font-size: 20px;
+    color: gray;
+    background-color: white;
+    height: 48px;
+    width: 600px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+}
+select
+{
+    background-color: white;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: white;
+    color:#874C4C;
+    font-size: 20px;
+}
+button
+{
+    background-color: #D39999;
+    border-color: #D39999;
+    border-style: solid;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    width: 256px;
+    height: 57px;
+    margin-left: 959px;
+    margin-top: 30px;
+}

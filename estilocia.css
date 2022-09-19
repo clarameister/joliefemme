@@ -1,0 +1,39 @@
+body
+{
+    background-color: #F1D4D4;
+    overflow: hidden;
+}
+#consd
+{
+    background-color: #874C4C;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 1.2em;
+    vertical-align: bottom;
+}
+input
+{
+    width: 200px;
+    height: 38px;
+    background-color: white;
+    color: #874C4C;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    font-size: 15px;
+}
+button
+{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    background-color: #B57777;
+    margin-left: 942px;
+    margin-top: 60px;
+    width: 256px;
+    height: 57px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #B57777;
+}

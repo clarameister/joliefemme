@@ -3,24 +3,91 @@ body
     background-color: #F1D4D4;
     overflow: hidden;
 }
+#ret1
+{
+    background-color: #D39999;
+    color: white;
+    font-size: 22px;
+    height: 100px;
+    width: 1500px;
+    margin-left: -16px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.quadrado
+{
+    margin-left: 236px;
+    margin-top: 100px;
+}
 #consd
 {
     background-color: #874C4C;
     color: white;
-    width: 200px;
-    height: 200px;
-    line-height: 1.2em;
-    vertical-align: bottom;
+    width: 430px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#ret2
+{
+    background-color: #FFF3F3;
+    width: 430px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#dt
+{
+    margin-left: 759px;
+    margin-top: -429px;
+    background-color: #874C4C;
+    color: white;
+    width: 430px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#data
+{
+    margin-left: 759px;
+    margin-top: 10px;
+}
+#hr
+{
+    margin-left: 759px;
+    margin-top: 28px;
+    background-color: #874C4C;
+    color: white;
+    width: 430px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#horario
+{
+    margin-left: 759px;
+    margin-top: 10px;
 }
 input
 {
-    width: 200px;
+    width: 424px;
     height: 38px;
     background-color: white;
     color: #874C4C;
     border-style: solid;
     border-color: white;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 15px;
 }
 button
@@ -29,8 +96,8 @@ button
     font-size: 20px;
     color: white;
     background-color: #B57777;
-    margin-left: 942px;
-    margin-top: 60px;
+    margin-left: 848px;
+    margin-top: 35px;
     width: 256px;
     height: 57px;
     border-style: solid;

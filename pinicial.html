@@ -7,55 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body> 
-    <div class="conteudo">
+<body>
+    <div class="conteudo"> 
             <div class="retangulo1">
-                    <img src="logotipo.png" class="logotipo" width="70px">JOLIE FEMME
-                </div>
-                <div class="icone_carrinho">
-                        <img src="carrinho.png" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
-                        <img src="icone-perfil.png" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
-                        </div>  
-                 
+                <img src="logotipo.png" class="logotipo" ><div id="nome"> JOLIE FEMME </div>
+            </div>
+            <div class="icone_carrinho">
+                <img src="carrinho.png" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+                <img src="icone-perfil.png" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+            </div>
     </div>
-    
+
     <div class="retangulo2">
+        &nbsp;<div>BLUSAS</div> <div>VESTIDOS</div> <div>SAIAS</div> <div>SHORTS</div> <div>CALÇAS</div> <div>CASACOS</div> <div>SAPATOS</div> <div>BOLSAS</div>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        &nbsp;&nbsp;&nbsp; BLUSAS   VESTIDOS   SAIAS   SHORTS   CALÇAS   CASACOS   SAPATOS   BOLSAS 
+        <div onclick="abrir_pagina('pconsultoria.html')" id="marcar">
+                MARCAR UMA CONSULTA DE MODA
+        </div>
 
+        <input id="searchbar" onkeyup="search_items()" type="text" name="search" placeholder="Pesquisar..">
+
+        <img src="lupa.png" class="lupa">&nbsp;
     </div>
-    <input id="searchbar" onkeyup="search_items()" type="text" name="search" placeholder="Pesquisar..">
-
-    <div onclick="abrir_pagina('pconsultoria.html')" id="marcar">
-            MARCAR UMA CONSULTA DE MODA
-    </div>
-
-    <div class="retangulo3">
-            VALOR DO LOOK R$289,90
-            VALOR DO LOOK R$259,90
-        <img src="azul.png" width="50px">
-        <img src="marrom.png" width="50px">
-        <img src="circulo.png" width="50px">
-        <img src="circulo.png" width="50px">
-
-    </div>
-    <div class="retangulo4">
-            Coleção nova!! Peças lindíssimas para esse outono!
+       
+    <div class="modelos">
+       
     </div>
 
-    <div class="retangulo5">
-            ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR? 
-            MARQUE UMA CONSULTA DE MODA!
-            
-            POR APENAS
-            50,00 + FRETE
+    <div class="consul">
+        <div class="toria">
+                ESTÁ EM 
+                DÚVIDA SOBRE
+                O QUE COMPRAR?
+        
+                MARQUE UMA 
+                CONSULTA DE MODA!
+        
+                POR APENAS 
+                R$50,00 + FRETE
+        </div>
     </div>
-    <img src="bolsa.png" width="50px">
-    <div class="retangulo6">
-        PROMOÇÃO RELÂMPAGO 
-        DE R$79,90 POR R$49,90
-    </div>
-    <script src="jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

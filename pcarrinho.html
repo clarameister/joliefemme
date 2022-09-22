@@ -2,89 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jolie Femme</title>
+    <title>CARRINHO</title>
+    <link rel="stylesheet" href="estilocar.css">
 </head>
 <body>
     <div class="retangulo1">
-            oi, //depende do que a pessoa pesquisar
-            <img src="star.png" width="50px">
-
+            <img src="pesquisar.png" width="70px" id="perfil">
+            <div id="texto"> Oi, .....</div>
     </div>
 
-    MEU CARRINHO:
+    <div id="car">MEU CARRINHO:</div>
 
     <img src="X.png" onclick="Excluir(C);" width="50px">
-
-    <script>
-   
-            var db = openDatabase('APP','v1.0','Base de pedidos',2*1024*1024);
-        
-          
-            db.transaction(function(tx)
-            {
-                
-                tx.executeSql('CREATE TABLE IF NOT EXISTS pedidos(cod INTEGER PRIMARY KEY AUTOINCREMENT,produto VARCHAR(20), preco DECIMAL)')
-            })
-            function Excluir(C)
-            {
-                db.transaction(function(tx)
-                {
-                    tx.executeSql('DELETE FROM pedidos WHERE cod=?',[C]);
-                    location.reload();
-                })
-            }
-            function Pesquisar()
-    {
-        db.transaction(function(tx)
-        {
-            var consulta = 'SELECT * FROM endereco';
-            tx.executeSql(consulta,[], function(tx,resultados)
-            {   
-                // Pegando o número de linhas retornado:
-                var linhas = resultados.rows.length;
-                if (linhas==0)
-                {
-                    alert("NÃO ENCONTRADO");
-                }
-               
-                var t = ""
-                var c = ""
-                var pro = ""
-                var pre = ""
-
-
-                 // Percorrendo cada linha:
-                for(i=0; i<linhas; i++)
-                {
-                    // Vamos pegar as colunas e jogar cada uma dentro de uma DIV:
-                     c = resultados.rows.item(i).cod
-                     pro = resultados.rows.item(i).produto
-                     pre = parseFloat(resultados.rows.item(i).preco);
-                     pre = (Math.round(pre * 100) / 100).toFixed(2);
-                     
-                    t = t + "<div class='linha'>"
-                    t = t + "<div class=codigo>" + c + "</div>"
-                    t = t + "<div class='produto'>" + pro + "</div>"
-                    t = t + "<div class='preco'>" + pre + "</div>"
-                    t = t + "<img src='x.png' width='20px' height='20px' onclick=\"Excluir("+c+");\"></div>" 
-                }
-                
-                listagem.innerHTML = t
-            });
-        })
-    }
-            function goBack() {
-            window.history.back()
-        }
-        var variaveis = new URLSearchParams(location.search);
-        var usuario = variaveis.get("usuario");
-        console.log(usuario)
-        
-        function abrir_pagina(arquivo)
-        {
-            window.open(arquivo+"?usuario="+usuario,"_self")
-        }
-        </script>
 
     <div class="retangulo2">
             ENDEREÇO DE ENVIO:

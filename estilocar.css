@@ -1,0 +1,29 @@
+body
+{
+    background-color: #F1D4D4;
+    overflow: hidden;
+}
+.retangulo1
+{
+    width: 1640px;
+    height: 160px;
+    margin-left: -15px;
+    margin-top: -10px;
+    background-color: #D39999;
+}
+#perfil
+{
+    margin-top: 44px;
+    margin-left: 50px;
+}
+#texto
+{
+    margin-top: -56px;
+    margin-left: 137px;
+    font-size: 30px;
+    color: white;
+}
+#car
+{
+    color:#874C4C;
+}

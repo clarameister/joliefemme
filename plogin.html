@@ -37,57 +37,6 @@
             CADASTRE-SE
         </div>
     </div>
-      
 
-    <script src="jquery-3.6.0.min.js"></script>
-    
-    <script>
-        // Criando a base de dados SENAI:
-        var db = openDatabase('SENAIJF','v1.0','Base de usuários',2*1024*1024);
-    
-        // Criando a tabela se não existir
-        db.transaction(function(tx)
-        {
-            // Vá em INSPECIONAR >> Application -> WEB SQL
-            tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios(email VARCHAR(10) PRIMARY KEY,senha VARCHAR(10))')
-        })
-
-        function Entrar()
-{
-    var usuario = email.value
-    if(email.value=="")
-    {
-        alert("Preencha o campo login!")
-    }
-    if(senha.value=="")
-    {
-        alert("Preencha o campo senha!")
-    }
-    if (email.value!="" && senha.value!= "")
-    {
-
-        db.transaction(function(tx)
-        {
-            var consulta = 'SELECT * FROM usuarios WHERE login=? and senha=?';
-            tx.executeSql(consulta,[email.value,senha.value], function(tx,resultados)
-            {   
-               
-                var linhas = resultados.rows.length;
-                if (linhas>0)
-                {
-                    window.open("cardapio.html?usuario="+usuario,"_self")
-                }else{
-                    alert("Usuário não encontrado!")
-                }
-               
-              
-            });
-        })
-
-
-      
-    }
-}
-    </script>
 </body>
 </html>

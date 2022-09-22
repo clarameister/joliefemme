@@ -7,9 +7,9 @@ body
 {
     background-color: #D39999;
     color: white;
-    font-size: 22px;
+    font-size: 25px;
     height: 100px;
-    width: 1500px;
+    width: 1680px;
     margin-left: -16px;
     margin-top: -10px;
     display: flex;
@@ -19,14 +19,15 @@ body
 }
 .quadrado
 {
-    margin-left: 236px;
+    margin-left: 320px;
     margin-top: 100px;
 }
 #consd
 {
     background-color: #874C4C;
     color: white;
-    width: 430px;
+    font-size: 20px;
+    width: 493px;
     height: 65px;
     display: flex;
     flex-direction: column;
@@ -36,8 +37,8 @@ body
 #ret2
 {
     background-color: #FFF3F3;
-    width: 430px;
-    height: 346px;
+    width: 493px;
+    height: 431px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,10 +46,11 @@ body
 }
 #dt
 {
-    margin-left: 759px;
-    margin-top: -429px;
+    margin-left: 843px;
+    margin-top: -514px;
     background-color: #874C4C;
     color: white;
+    font-size: 20px;
     width: 430px;
     height: 65px;
     display: flex;
@@ -58,15 +60,16 @@ body
 }
 #data
 {
-    margin-left: 759px;
+    margin-left: 843px;
     margin-top: 10px;
 }
 #hr
 {
-    margin-left: 759px;
+    margin-left: 843px;
     margin-top: 28px;
     background-color: #874C4C;
     color: white;
+    font-size: 20px;
     width: 430px;
     height: 65px;
     display: flex;
@@ -76,13 +79,13 @@ body
 }
 #horario
 {
-    margin-left: 759px;
+    margin-left: 843px;
     margin-top: 10px;
 }
 input
 {
-    width: 424px;
-    height: 38px;
+    width: 425px;
+    height: 137px;
     background-color: white;
     color: #874C4C;
     border-style: solid;
@@ -96,8 +99,8 @@ button
     font-size: 20px;
     color: white;
     background-color: #B57777;
-    margin-left: 848px;
-    margin-top: 35px;
+    margin-left: 696px;
+    margin-top: 70px;
     width: 256px;
     height: 57px;
     border-style: solid;

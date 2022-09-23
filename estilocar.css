@@ -1,13 +1,14 @@
 body
 {
     background-color: #F1D4D4;
+    display: flex;
     overflow: hidden;
 }
 .retangulo1
 {
-    width: 1640px;
+    width: 1600px;
     height: 160px;
-    margin-left: -15px;
+    margin-left: -8px;
     margin-top: -10px;
     background-color: #D39999;
 }
@@ -25,5 +26,107 @@ body
 }
 #car
 {
+    color:#874C4C;
+    width: 129px;
+    height: 30px;
+    margin-top: 220px;
+    margin-left: -1542px;
+}
+#ret2
+{
+    margin-top: 271px;
+    margin-left: -129px;
+    width: 580px;
+    height: 175px;
+    background-color: #FEEAEA;
+}
+#ret3
+{
+    margin-top: 12px;
+    margin-left: -129px;
+    width: 580px;
+    height: 175px;
+    background-color: #FEEAEA;
+}
+#ret4
+{
+    margin-top: 12px;
+    margin-left: -129px;
+    width: 580px;
+    height: 175px;
+    background-color: #FEEAEA;
+}
+.retangulo2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 381px;
+    margin-top: 272px;
+    background-color: #FEEAEA;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    width: 500px;
+    height: 500px;
+}
+#x
+{
+    width: 30px;
+    height: 30px;
+    margin-top: 145px;
+    margin-left: 549px;
+}
+#x2
+{
+    width: 30px;
+    height: 30px;
+    margin-top: 145px;
+    margin-left: 549px;
+}
+#x3
+{
+    width: 30px;
+    height: 30px;
+    margin-top: 145px;
+    margin-left: 549px;
+}
+#textinho
+{
+    font-size: 22px;
+    color:#874C4C;
+}
+button
+{
+    width: 388px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 6px;
+    border-radius: 15px;
+    background-color: #874C4C;
+    color: white;
+    border-color:#874C4C;
+    border-style: solid;
+}
+input
+{
+    width: 370px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #874C4C;
+}
+select
+{
+    font-size: 20px;
+    border-radius: 15px; 
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
     color:#874C4C;
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="estilocar.css">
 </head>
 <body>
+    
     <div class="retangulo1">
             <img src="pesquisar.png" width="70px" id="perfil">
             <div id="texto"> Oi, .....</div>
@@ -13,28 +14,39 @@
 
     <div id="car">MEU CARRINHO:</div>
 
-    <img src="X.png" onclick="Excluir(C);" width="50px">
+    <div class="retangulos">
+            <div id="ret2">
+                <img src="X.png" id="x">
+            </div>
+            <div id="ret3">
+                    <img src="X.png" id="x2">
+            </div>
+            <div id="ret4">
+                    <img src="X.png" id="x3">
+            </div>
+    </div>
 
     <div class="retangulo2">
-            ENDEREÇO DE ENVIO:
-
-            <input type="text" size="15" width="50%" height="50%">
-
-            RESUMO DO PEDIDO:
-            SUBTOTAL: 
-            FRETE: 
-            TOTAL DO PEDIDO: 
-            FORMA DE PAGAMENTO: 
-            <select id="selecao" class="produto2" onchange="produto3();">  
-                    <option selected>Cartão</option>
-                    <option selected>Dinheiro</option>
-                    <option selected>Pix</option>
-            </select>
-
-    </div>
-
-    <div class="retangulo3">
-        CONFIRMAR PEDIDO
-    </div>
+            <div id="textinho">
+                <div id="end">
+                ENDEREÇO DE ENVIO:
+                <br>
+                <input type="text" size="15" width="50%" height="50%">
+                </div><br>
+                RESUMO DO PEDIDO:<br>
+                SUBTOTAL: <br>
+                FRETE: <br>
+                TOTAL DO PEDIDO:<br> 
+                FORMA DE PAGAMENTO: 
+                <select id="selecao" class="produto2" onchange="produto3();">  
+                        <option selected>Cartão</option>
+                        <option selected>Dinheiro</option>
+                        <option selected>Pix</option>
+                </select><br>
+            </div>
+                <button>
+                        CONFIRMAR PEDIDO
+                </button>
+        </div>
 </body>
 </html>

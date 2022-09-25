@@ -7,25 +7,33 @@ body
     width:100%;
     height:100vh;
     margin:0%;
+    overflow: hidden;
 }
 .retangulo1
 {
     background-color: rgb(211,153, 153);
     width: 100%;
-    height: 104px;
+    height: 65px;
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     justify-content: flex-start;
     justify-items: flex-start;
 }
+.sair
+{
+    background-color:rgb(222, 150, 150);
+    width: 100px;
+    margin-top: -40px;
+    margin-left: 1000px;
+}
 .frase
 {
     color: rgb(135,76,76);
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
-    margin-top: 38px;
-    margin-left: 160px;
+    margin-top: 17px;
+    margin-left: 125px;
 }
 #meu_upload
 {
@@ -34,76 +42,142 @@ body
 #imagem
 {
     position: absolute;
-    margin-top: 21px;
+    margin-top: 7px;
     margin-left: 61px;
 }
 .traba
 {
     color: rgb(135,76,76);
-    font-size: 35px;
-    margin-top: 45px;
-    margin-left: -1058px;
+    font-size: 25px;
+    position: absolute;
+    top: 89px;
+    left: 239px;
+}
+.conteudo
+{
+    width: 70%;
+    height: 15%;
+    margin-top: 100px;
+    margin-left: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
 #p
 {
     background-color: rgb(222,182,182);
     border-radius: 15px;
-    width: 10%;
-    height: 170px;
-    position: absolute;
-    left: calc(50% - 170px/2 - 465px);
-    top: 216px;
-    font-size: 25px;
+    width: 15%;
+    height: 133px;
+    font-size: 24px;
     color:rgb(135,76,76);
     display: block;
     text-align: center;
 }
-#mf
+#f
 {
     background-color: rgb(222,182,182);
     border-radius: 15px;
-    width: 216px;
-    height: 169px;
-    position: absolute;
-    left: 436px;
+    width: 173px;
+    height: 133px;
     top: 216px;
     font-size: 25px;
     color:rgb(135,76,76);
     display: block;
     text-align: center;
 }
+#m
+{
+    background-color: rgb(222,182,182);
+    border-radius: 15px;
+    width: 139px;
+    height: 133px;
+    font-size: 25px;
+    color:rgb(135,76,76);
+    display: block;
+    text-align: center;
+}
+#ch
+{
+    background-color: rgb(222,182,182);
+    border-radius: 15px;
+    width: 155px;
+    height: 132px;
+    font-size: 25px;
+    color:rgb(135,76,76);
+    display: block;
+    text-align: center;
+}
+.dados
+{
+    color: rgb(135,76,76);
+    font-size: 25px;
+    position: absolute;
+    top: 333px;
+    left: 239px;
+}
+.lapis
+{
+    position: absolute;
+    top: 1px;
+    left: 140px;
+}
+.nse
+{
+    color: rgb(135,76,76);
+    font-size: 25px;
+    width: 70%;
+    height: 15%;
+    margin-top: 139px;
+    margin-left: 10px;
+}
+.etc
+{
+    color:rgb(135,76,76); 
+    font-size: 25px;
+    width: 70%;
+    height: 15%; 
+    margin-top: -90px;
+    margin-left: 1000px;
+}
+#nome
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#email
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#endereco
+{
+    border-radius: 12px;
+    width:340px;
+    height: 17px;
+}
+#senha
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#telefone
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#cpf
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
 
 /*
-<div id="mp">
-    Meu Trabalho:
-</div>
-<div id="p">
-    Pedidos
-</div>
-<img src="caixa.png" class="caixa"> 
-<div id="fc">
-    <img src="pessoa.png">
-    Meus Funcionários
-</div>
-<div id="mm">
-    <img src="carta.png">
-    Minhas Mensagens
-</div>
-<div id="mc">
-    <img src="calendario.png">
-    Minhas Consultas
-</div>
-<div id="d">
-    <img src="devolucao.png">
-    Devolução
-</div>
-<div id="md">
-    Meus Dados:
-    <img src="pencil.png">
-</div>
-<div id="n">
-    Nome: <input type="text" id="nome">
-</div>
 <div id="e">
     E-mail: <input type="text" id="email">
 </div>
@@ -119,8 +193,3 @@ body
 <div id="c">
     CPF: <input type="text" id="cpf">
 </div>
-<div id="lg">
-    Log Out
-</div>
-
-

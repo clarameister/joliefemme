@@ -1,63 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PERFIL CLIENTE</title>
+    <link rel="stylesheet" href="estilocliente.css">
+    <title>Perfil Cliente</title>
 </head>
 <body>
-    
-    <div id="retangulo1"></div>  
-
-    <div id="mp">
-        Meus Pedidos:
-    </div>
+    <div class="retangulo1">
+        <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+        <input type="file" id="meu_upload">
+        <div class="frase"> Oi cliente!! Pronto para comprar?</div>
+    </div>  
+    <button onclick="" class="sair">
+        Sair
+    </button>
+    <div class="pedidos"> Meus Pedidos:</div>
+    <div class="conteudo">
     <div id="p">
-        <img src="caixa.png">
-        Pedidos
-    </div>
-    <div id="mm">
-        <img src="carta.png">
-        Minhas Mensagens
-    </div>
-    <div id="mc">
-        <img src="calendario.png">
-        Minhas Consultas
-    </div>
-    <div id="d">
-        <img src="devolucao.png">
-        Devolução
-    </div>
-    <div id="md">
-        Meus Dados:
-        <img src="pencil.png">
-    </div>
-    <div id="md">
-            Meus Dados:
-            <img src="pencil.png">
-        </div>
-        <div id="n">
-            Nome: <input type="text" id="nome">
-        </div>
-        <div id="e">
-            E-mail: <input type="text" id="email">
-        </div>
-        <div id="end">
-            Endereço: <input type="text" id="endereco">
-        </div>
-        <div id="s">
-            Senha: <input type="text" id="senha">
-        </div>
-        <div id="t">
-            Telefone: <input type="text" id="telefone">
-        </div>
-        <div id="c">
-            CPF: <input type="text" id="cpf">
-        </div>
-    <div id="lg">
-        Log Out
+       <img src="caixa.png" width="70%" >
+       Pedidos
     </div>
 
+    <div id="d" >
+        <img src="devolucao.png" width="60%">
+        Devolução
+        </div>
+
+    <div id="m">
+        <img src="carta.png" width="70%">
+        Mensagens
+    </div>
+
+    <div id="c">
+        <img src="calendario.png" width="63%">
+        Consultas
+    </div>
+    </div>
+
+    <div class="dados">Meus Dados: <img src="lapis.png" width="18%" class="lapis"></div>
+
+    <div class="nse">
+        Nome: <input type="text" id="nome">
+        <br><br>
+        Senha: <input type="text" id="senha">
+        <br><br>
+        Endereço: <input type="text" id="endereco">
+    </div>
+    <div class="etc">
+        E-mail: <input type="text" id="email">
+        <br><br>
+        Telefone: <input type="text" id="telefone">
+        <br><br>
+        CPF: <input type="text" id="cpf">
+    </div>  
 </body>
+ <script src="jquery.js"></script>
+ <script> 
+
+function busca_imagem()
+{
+    meu_upload.click();
+}
+    $(document).on("change", "#meu_upload", function(e) {
+        showThumbnail(this.files);
+    });
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+                caminho= e.target.result;
+
+               db.transaction(function(tx)
+                {
+                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
+                })
+
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+
+
+</script>
 </html>

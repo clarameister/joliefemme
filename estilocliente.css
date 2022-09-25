@@ -45,7 +45,7 @@ body
     margin-top: 7px;
     margin-left: 61px;
 }
-.traba
+.pedidos
 {
     color: rgb(135,76,76);
     font-size: 25px;
@@ -74,12 +74,12 @@ body
     display: block;
     text-align: center;
 }
-#f
+#c
 {
     background-color: rgb(222,182,182);
     border-radius: 15px;
-    width: 173px;
-    height: 133px;
+    width: 142px;
+    height: 139px;
     top: 216px;
     font-size: 25px;
     color:rgb(135,76,76);
@@ -91,18 +91,18 @@ body
     background-color: rgb(222,182,182);
     border-radius: 15px;
     width: 139px;
-    height: 133px;
+    height: 138px;
     font-size: 25px;
     color:rgb(135,76,76);
     display: block;
     text-align: center;
 }
-#ch
+#d
 {
     background-color: rgb(222,182,182);
     border-radius: 15px;
     width: 155px;
-    height: 132px;
+    height: 135px;
     font-size: 25px;
     color:rgb(135,76,76);
     display: block;

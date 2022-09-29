@@ -48,6 +48,32 @@ body
     border-color: #874C4C;
     border-radius: 15px;
 }
+.caixaimg
+{
+    background-color: #D39999;
+    color: white;
+    font-size: 20px;
+    margin-top: -600px;
+    margin-left: 801px;
+    width: 720px;
+    height: 600px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#imagem
+{
+    width: 250px;
+    height: 250px;
+}
+#voltar
+{
+    width: 40px;
+    height: 40px;
+    margin-top: -287px;
+    margin-left: 70px;
+}
 input
 {
     width: 470px;

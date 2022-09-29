@@ -11,8 +11,9 @@
     <div id="ret1">
     <img src="logotipo_joliefemme.png" id="img">
     </div>
-
+    <form action="inserir.php" method="post">
     <div id="campos">
+        <form action="inserir.php" method="post">
         <input type="text" name="nome" value="" placeholder="Nome" /> 
         <br><br>
         <input type="email" name="email" value="" placeholder="E-mail" /> 
@@ -26,6 +27,7 @@
         <input type="text" name="endereco" value="" placeholder="Endereço" /> 
         <br><br>
         VOCÊ É... 
+
         <select id="selecao">  
                 <option selected>GERENTE</option>
                 <option selected>FUNCIONÁRIO</option>
@@ -33,9 +35,8 @@
         </select>
         <br><br>
     </div>
-    <button id="cadastro">
-        CADASTRAR
-    </button>
+    <input type="submit" value="CADASTRAR" id="cadastro">
+    </form>
     <div id="cc">
         CRIE SUA CONTA:
     </div>

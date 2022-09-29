@@ -84,7 +84,7 @@ select
     color:#874C4C;
     font-size: 20px;
 }
-button
+input[type=submit]
 {
     background-color: #D39999;
     border-color: #D39999;

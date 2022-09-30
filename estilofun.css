@@ -45,6 +45,11 @@ body
     margin-top: 7px;
     margin-left: 61px;
 }
+#voltar
+{
+    margin-left: -1424px;
+    margin-top: 78px;
+}
 .listagem
 {
     display: flex;

@@ -22,7 +22,7 @@ body
     color: #874C4C;
     font-size: 25px;
     margin-left: 983px;
-    margin-top: -869px;
+    margin-top: -829px;
 }
 #campos
 {
@@ -30,6 +30,7 @@ body
     margin-left: 780px;
     color: #874C4C;
     font-size: 20px;
+    height: 700px;
 }
 input[type=text] 
 {
@@ -95,5 +96,5 @@ input[type=submit]
     width: 256px;
     height: 57px;
     margin-left: 959px;
-    margin-top: 30px;
+    margin-top: 5px;
 }

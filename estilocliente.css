@@ -45,20 +45,25 @@ body
     margin-top: 7px;
     margin-left: 61px;
 }
+#voltar
+{
+    margin-left: -1424px;
+    margin-top: 78px;
+}
 .pedidos
 {
     color: rgb(135,76,76);
     font-size: 25px;
     position: absolute;
     top: 89px;
-    left: 239px;
+    left: 230px;
 }
 .conteudo
 {
     width: 70%;
     height: 15%;
-    margin-top: 100px;
-    margin-left: 60px;
+    margin-top: 63px;
+    margin-left: 6px;
     display: flex;
     text-align: center;
     justify-content: space-evenly;
@@ -84,7 +89,7 @@ body
     color: rgb(135,76,76);
     font-size: 25px;
     position: absolute;
-    top: 333px;
+    top: 520px;
     left: 239px;
 }
 .lapis
@@ -103,12 +108,13 @@ body
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 125px;
+    margin-top: 220px;
 }
 .nse
 {
     font-size: 25px;
     width: 50%;
+    margin-top: 20px;
 }
 .etc
 {
@@ -130,7 +136,7 @@ body
 #endereco
 {
     border-radius: 12px;
-    width:340px;
+    width:371px;
     height: 17px;
 }
 #senha
@@ -151,4 +157,8 @@ body
     width:371px;
     height: 17px;
 }
-
+input
+{
+    border-color: white;
+    border-style: solid;
+}

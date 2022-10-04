@@ -64,6 +64,17 @@ body
     font-size: 20px;
     margin-top: 4px;
 }
+input[type=password] 
+{
+    font-size: 20px;
+    color: gray;
+    background-color: white;
+    height: 48px;
+    width: 600px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+}
 input[type=text] 
 {
     font-size: 20px;
@@ -75,18 +86,18 @@ input[type=text]
     border-radius: 15px;
     border-color: white;
 }
-button
+input[type=submit]
 {
     position: relative;
     font-size: 20px;
     color: white;
     background-color: #D39999;
-    margin-left: 942px;
-    margin-top: 60px;
     width: 256px;
     height: 57px;
     border-style: solid;
     border-radius: 15px;
     border-color: #D39999;
+    margin-top: 22px;
+    margin-left: 189px;
 }
 

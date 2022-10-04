@@ -19,14 +19,16 @@ body
 }
 #cc
 {
+    height: 38px;
+    width: 600px;
     color: #874C4C;
     font-size: 25px;
-    margin-left: 983px;
-    margin-top: -829px;
+    margin-top: 10px;
+    margin-left:189px;
 }
 #campos
 {
-    margin-top: -886px;
+    margin-top: -916px;
     margin-left: 780px;
     color: #874C4C;
     font-size: 20px;
@@ -94,7 +96,6 @@ input[type=submit]
     font-size: 20px;
     color: white;
     width: 256px;
-    height: 57px;
-    margin-left: 959px;
-    margin-top: 5px;
+    height: 37px;
+    margin-left: 184px;
 }

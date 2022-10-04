@@ -47,16 +47,17 @@ body
 }
 #voltar
 {
-    margin-left: -1424px;
-    margin-top: 78px;
+    margin-left: -1536px;
+    margin-top: -31px;
+    width: 35px;
+    height: 35px;
 }
 .pedidos
 {
     color: rgb(135,76,76);
     font-size: 25px;
-    position: absolute;
-    top: 89px;
-    left: 230px;
+    margin-top: 84px;
+    margin-left: -971px;
 }
 .conteudo
 {
@@ -66,7 +67,7 @@ body
     margin-left: 6px;
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .p
 {
@@ -83,6 +84,7 @@ body
     align-content: center;
     align-items: center;
     padding:10px;
+    margin-left: 40px;
 }
 .dados
 {

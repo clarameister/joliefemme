@@ -10,11 +10,11 @@ $numero= $_POST["numero"];
 $bairro= $_POST["bairro"];
 $cidade= $_POST["cidade"];
 $estado= $_POST["estado"];
-$nivel_admin= 0;
 
 
 
-$comando = $pdo->prepare("INSERT INTO cliente(nome,senha,cpf,email,telefone,rua,numero,bairro,cidade,estado, nivel_admin) VALUES(:nome,:senha,:cpf,:email,:telefone,:rua,:numero,:bairro,:cidade,:estado,:nivel_admin)");
+$comando = $pdo -> prepare("INSERT INTO cliente(nome,senha,cpf,email,telefone,rua,numero,bairro,cidade,estado) VALUES(:nome,:senha,:cpf,:email,:telefone,:rua,:numero,:bairro,:cidade,:estado)");
+
 $comando->bindValue(":nome", $nome);
 $comando->bindValue(":senha", $senha);
 $comando->bindValue(":cpf", $cpf);
@@ -25,7 +25,6 @@ $comando->bindValue(":numero", $numero);
 $comando->bindValue(":bairro", $bairro);
 $comando->bindValue(":cidade", $cidade);
 $comando->bindValue(":estado", $estado);
-$comando->bindValue(":nivel_admin", $nivel_admin);
 $comando->execute();
 
 echo ("dado gravados");

@@ -24,9 +24,9 @@
             session_start();
 
             
-            $_SESSION['pk_usuario'] = $resultado['pk_usuario'];
+            $_SESSION['idclientes'] = $resultado['idclientes'];
             $_SESSION['senha'] = $resultado['senha'];
-            $_SESSION['is_adm_usuario'] = $resultado['is_adm_usuario'];
+            $_SESSION['nivel_admin'] = $resultado['nivel_admin'];
             $_SESSION['loggedin'] = true;
 
            

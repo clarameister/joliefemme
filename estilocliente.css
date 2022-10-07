@@ -52,7 +52,7 @@ body
     width: 35px;
     height: 35px;
 }
-.pedidos
+.dados
 {
     color: rgb(135,76,76);
     font-size: 25px;
@@ -63,7 +63,7 @@ body
 {
     width: 70%;
     height: 15%;
-    margin-top: 63px;
+    margin-top: 23px;
     margin-left: 6px;
     display: flex;
     text-align: center;
@@ -86,19 +86,19 @@ body
     padding:10px;
     margin-left: 40px;
 }
-.dados
+.pedidos
 {
     color: rgb(135,76,76);
     font-size: 25px;
     position: absolute;
-    top: 520px;
-    left: 239px;
+    top: 367px;
+    left: 248px;
 }
 .lapis
 {
     position: absolute;
-    top: 1px;
-    left: 140px;
+    top: 125px;
+    left: 381px;
 }
 .conteudo2
 {
@@ -110,7 +110,7 @@ body
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 220px;
+    margin-top: 68px;
 }
 .nse
 {
@@ -122,6 +122,7 @@ body
 {
     font-size: 25px;
     width: 50%;
+    margin-top: 22px;
 }
 #nome
 {

@@ -27,4 +27,10 @@ $comando->bindValue(":cidade", $cidade);
 $comando->bindValue(":estado", $estado);
 $comando->execute();
 
-echo ("dado gravados");
+
+header("Location:inicial.html");
+
+
+unset($comando);
+unset($pdo);
+?>

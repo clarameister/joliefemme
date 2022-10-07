@@ -1,14 +1,11 @@
 <?php
 include("conecta.php");
-$data = $_POST["data"];
+$dia = $_POST["dia"];
 $hora = $_POST["hora"];
-$consultora = $_POST["consultora"];
 
-
-$comando = $pdo->prepare("INSERT INTO consultoria(data,hora,consultora) VALUES(:data,:hora,:consultora)");
-$comando->bindValue(":data", $data);
+$comando = $pdo-> prepare("INSERT INTO consultoria(data,hora) VALUES(:data,:hora)");
+$comando->bindValue(":dia", $dia);
 $comando->bindValue(":hora", $hora);
-$comando->bindValue(":consultora", $consultora);
 $comando->execute();
 
-echo ("dado gravados");
+echo ("consulta marcada");

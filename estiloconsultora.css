@@ -63,10 +63,10 @@ body
     width: 70%;
     height: 15%;
     margin-top: 63px;
-    margin-left: -20px;
+    margin-left: 6px;
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .p
 {
@@ -83,6 +83,7 @@ body
     align-content: center;
     align-items: center;
     padding:10px;
+    margin-left: 40px;
 }
 .dados
 {

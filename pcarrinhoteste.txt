@@ -1,29 +1,47 @@
-body
-{
-    background-color: #F1D4D4;
-    display: flex;
-    overflow: hidden;
-}
-.retangulo1
-{
-    width: 1600px;
-    height: 160px;
-    margin-left: -8px;
-    margin-top: -10px;
-    background-color: #D39999;
-}
-#perfil
-{
-    margin-top: 44px;
-    margin-left: 50px;
-}
-#texto
-{
-    margin-top: -56px;
-    margin-left: 137px;
-    font-size: 30px;
-    color: white;
-}
+<button onclick="" class="sair">
+                Sair
+        </button>
+        <img src="seta.png" id="voltar">
+
+        <div id="car">MEU CARRINHO:</div>
+
+        <div class="retangulos">
+                <div id="ret2">
+                        <img src="X.png" id="x">
+                </div>
+                <div id="ret3">
+                        <img src="X.png" id="x2">
+                </div>
+                <div id="ret4">
+                        <img src="X.png" id="x3">
+                </div>
+        </div>
+
+        <div class="retangulo2">
+                <div id="textinho">
+                        <div id="end">
+                                ENDEREÇO DE ENVIO:
+                                <br>
+                                <input type="text" size="15" width="50%" height="50%">
+                        </div><br>
+                        RESUMO DO PEDIDO:<br>
+                        SUBTOTAL: <br>
+                        FRETE: <br>
+                        TOTAL DO PEDIDO:<br>
+                        FORMA DE PAGAMENTO:
+                        <select id="selecao" class="produto2" onchange="produto3();">
+                                <option selected>Cartão</option>
+                                <option selected>Dinheiro</option>
+                                <option selected>Pix</option>
+                        </select><br>
+                </div>
+                <button>
+                        CONFIRMAR PEDIDO
+                </button>
+        </div>
+
+
+
 #car
 {
     color:#874C4C;
@@ -62,8 +80,8 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 294px;
-    margin-top: 272px;
+    margin-left: 700px;
+    margin-top: 150px;
     background-color: #FEEAEA;
     padding-top: 10px;
     padding-left: 10px;
@@ -129,4 +147,9 @@ select
     border-style: solid;
     border-width: 2px;
     color:#874C4C;
+}
+#retangulos
+{
+    margin-left: 700px;
+    margin-top: 150px;
 }

@@ -1,12 +1,11 @@
 <?php
-    include("conecta.php");
+ 
+ include("conecta.php");
 
-    
     $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $set_senha = $_POST["senha"];
 
-    
-    $comando = $pdo->prepare("SELECT senha FROM cliente WHERE email = :email");
+    $comando = $pdo->prepare("SELECT senha, nivel_admin FROM cliente WHERE email = :email");
     
    
     $comando->bindValue(":email", $email);
@@ -19,7 +18,7 @@
         
         $resultado = $comando->fetch();
         
-        if ($resultado['senha'] == $senha) {
+        if ($resultado['senha'] == $set_senha) {
             
             session_start();
 
@@ -30,7 +29,7 @@
             $_SESSION['loggedin'] = true;
 
            
-            header("Location:inicial.html");
+            header("Location:inicial.php");
         }else {
             echo ("Email ou Senha Inválida!");
         }

@@ -8,13 +8,20 @@
 </head>
 
 <body>
+    <?php
+        session_start();
+        if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+            header("location: login.html");
+                exit;
+        }
+    ?>
     <div class="conteudo1"> 
             <div class="retangulo1">
                 <img src="logotipo.png" class="logotipo" ><div id="nome"> JOLIE FEMME </div>
             </div>
             <div class="icone_carrinho">
-                <img src="carrinho.png" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
-                <img src="icone-perfil.png" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+                <img src="carrinho.png" onclick="abrir_pagina('carrinho.html')" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+                <img src="icone-perfil.png" onclick="abrir_pagina('perfil.php')" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
             </div>
     </div>
 
@@ -23,7 +30,7 @@
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <div onclick="abrir_pagina('pconsultoria.html')" id="marcar">
+        <div onclick="abrir_pagina('.html')" id="marcar">
                 MARCAR UMA CONSULTA DE MODA
         </div>
 
@@ -53,5 +60,15 @@
     </div>
     </div>
 </body>
+<script src="jquery.js"></script>
+<script>
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
 
+    function abrir_pagina(arquivo)
+{
+    window.open(arquivo+"?usuario="+usuario,"_self")
+}
+    </script>
 </html>

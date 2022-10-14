@@ -11,32 +11,32 @@
     <div id="ret1">
         JOLIE FEMME
     </div>
-    <img src="seta.png" id="voltar">
     <div class="quadrado">
         <div id="consd">
             CONSULTORAS DISPONÍVEIS
         </div>
         <div id="ret2"></div>
+    </div>
     <br>
+    <form action="inserir2.php" method="post">
+    <div class="inputs">
     <div id="dt">
         ESCOLHA UMA DATA:
     </div>
     <br>
-
-    <form action="inserir2.php" method="post">
-        <div id="data">
-            <input type="date" min="2022-10-01" max="2022-12-31">
-        </div>
-        <div id="hr">
-            MARCAR UM HORÁRIO:
-        </div>
-        <br>
-        <div id="horario">
-            <input type="time">
-        </div>
+    <div id="data">
+        <input type="date" min="2022-10-01" max="2022-12-31" id="dia" name="dia">
+    </div>
+    <div id="hr">
+        MARCAR UM HORÁRIO:
+    </div>
+    <br>
+    <div id="horario">
+        <input type="time" id="hora" name="hora">
+    </div>
+    </div>
+    <input type="submit" value="MARCAR CONSULTA" id="mc"></input>
     </form>
-
-    <input type="submit" value="MARCAR CONSULTORIA" id="mc">
 
 </body>
 </html>

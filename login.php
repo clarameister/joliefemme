@@ -5,7 +5,7 @@
     $email = $_POST["email"];
     $set_senha = $_POST["senha"];
 
-    $comando = $pdo->prepare("SELECT senha, nivel_admin FROM cliente WHERE email = :email");
+    $comando = $pdo->prepare("SELECT senha, nivel_admin, id_clientes FROM cliente WHERE email = :email");
     
    
     $comando->bindValue(":email", $email);
@@ -23,7 +23,7 @@
             session_start();
 
             
-            $_SESSION['idclientes'] = $resultado['idclientes'];
+            $_SESSION['id_clientes'] = $resultado['id_clientes'];
             $_SESSION['senha'] = $resultado['senha'];
             $_SESSION['nivel_admin'] = $resultado['nivel_admin'];
             $_SESSION['loggedin'] = true;

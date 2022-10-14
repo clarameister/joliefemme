@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="estiloconsultora.css">
+    <link rel="stylesheet" href="estiloperfil.css">
     <title>Perfil</title>
 </head>
 <body>
@@ -47,7 +47,15 @@
     }
     else
     {
-        echo ''
+        echo '<div class="p">
+        <img src="caixa.png" width="70%" >
+        Pedidos
+     </div>
+        
+        <div class="p" >
+        <img src="calendario.png" width="63%">
+        Consultorias
+        </div>';
     }
     ?>
     </div>

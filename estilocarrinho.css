@@ -45,10 +45,17 @@ body
     margin-top: 7px;
     margin-left: 61px;
 }
-#voltar
+.voltar
 {
-    margin-left: -1536px;
-    margin-top: -31px;
-    width: 100px;
-    height: 35px;
+    position: absolute;
+    margin-left: -768px;
+    margin-top: 16px;
+}
+#car
+{
+    color:#874C4C;
+    width: 129px;
+    height: 30px;
+    margin-top: 220px;
+    margin-left: -1542px;
 }

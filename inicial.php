@@ -20,7 +20,7 @@
                 <img src="logotipo.png" class="logotipo" ><div id="nome"> JOLIE FEMME </div>
             </div>
             <div class="icone_carrinho">
-                <img src="carrinho.png" onclick="abrir_pagina('carrinho.html')" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+                <img src="" onclick="abrir_pagina('carrinho.html')" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
                 <img src="icone-perfil.png" onclick="abrir_pagina('perfil.php')" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
             </div>
     </div>

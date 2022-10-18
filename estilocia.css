@@ -51,7 +51,7 @@ body
 }
 #dt
 {
-    margin-left: 544px;
+    margin-left: 825px;
     margin-top: -514px;
     background-color: #874C4C;
     color: white;
@@ -65,12 +65,12 @@ body
 }
 #data
 {
-    margin-left: 544px;
+    margin-left: 825px;
     margin-top: 10px;
 }
 #hr
 {
-    margin-left: 544px;
+    margin-left: 825px;
     margin-top: 28px;
     background-color: #874C4C;
     color: white;
@@ -84,7 +84,7 @@ body
 }
 #horario
 {
-    margin-left: 544px;
+    margin-left: 825px;
     margin-top: 10px;
 }
 input[type=time]
@@ -119,6 +119,6 @@ input[type=submit]
     border-color: #874C4C;
     border-radius: 5px;
     font-size: 15px;
-    margin-left: 309px;
+    margin-left: 600px;
     margin-top: 43px;
 }

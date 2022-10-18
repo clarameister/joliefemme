@@ -8,7 +8,7 @@
     $comando->bindValue(":hora", $hora);
     $comando->execute();
 
-    header("Location:inicial.html");
+    header("Location:inicial.php");
     //echo ("Consultoria marcada!");
 
     unset($comando);

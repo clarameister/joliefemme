@@ -4,7 +4,8 @@
 
     $email = $_POST["email"];
     $set_senha = $_POST["senha"];
-
+    echo($email);
+    echo($set_senha);
     $comando = $pdo->prepare("SELECT senha, nivel_admin, idclientes FROM cliente WHERE email = :email");
     
    

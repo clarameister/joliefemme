@@ -35,7 +35,7 @@ body
     margin-left: 20px;
     margin-top: 20px;
 }
-.inserir
+input[type=submit] 
 {
     width: 200px;
     height: 45px;

@@ -13,17 +13,43 @@
         Cadastre o produto aqui:
     </div>
         <img src="seta.png" id="voltar">
-     <form action="inserir3.php" method="post"></form>   
+    <form action="inserir3.php" method="POST" enctype="multipart/form-data">   
     <div class="caixas">
-        <div id="nomep"> <input type="text" id="nome" value="" placeholder="Insira o nome do produto"> </div>
-        <div id="precop"> <input type="text" id="preco" value="" placeholder="Insira o preço do produto"> </div>
-        <input type="submit" value="INSERIR" ></button>
+        <div id="nomep"> <input type="text" name="nome_prod" id="nome" value="" placeholder="Insira o nome do produto"> </div>
+        <div id="precop"> <input type="text" name="preco" id="preco" value="" placeholder="Insira o preço do produto"> </div>
+        <input type="submit" value="INSERIR" >
     </div>
 
     <div class="caixaimg">
         Insira a imagem aqui!
-        <img src="img.png" id="imagem">
+        <img onclick="busca_imagem();" name="imagem" src="img.png" id="imagem">
+        <input type="file" id="meu_upload" name="meu_upload" multiple accept="image/*">
     </div>
 </form>
 </body>
+<script src="jquery.js"></script>
+ <script> 
+
+function busca_imagem()
+{
+    meu_upload.click();
+}
+    $(document).on("change", "#meu_upload", function(e) {
+        showThumbnail(this.files);
+    });
+    function showThumbnail(files) {
+        if (files && files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+               imagem.src =  e.target.result;
+                caminho= e.target.result;
+            }
+
+            reader.readAsDataURL(files[0]);
+        }
+    }
+
+
+</script>
 </html>

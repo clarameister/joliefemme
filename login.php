@@ -5,7 +5,7 @@
     $email = $_POST["email"];
     $set_senha = $_POST["senha"];
 
-    $comando = $pdo->prepare("SELECT senha, nivel_admin, id_clientes FROM cliente WHERE email = :email");
+    $comando = $pdo->prepare("SELECT senha, nivel_admin, idclientes FROM cliente WHERE email = :email");
     
    
     $comando->bindValue(":email", $email);

@@ -141,12 +141,6 @@ function busca_imagem()
             reader.onload = function (e) {
                imagem.src =  e.target.result;
                 caminho= e.target.result;
-
-               db.transaction(function(tx)
-                {
-                    tx.executeSql('UPDATE usuarios SET imagem=? WHERE login=?',[imagem.src,login.value]);
-                })
-
             }
 
             reader.readAsDataURL(files[0]);

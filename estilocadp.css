@@ -26,6 +26,10 @@ body
     align-items: center;
     justify-content: center;
 }
+#meu_upload
+{
+    display: none;
+}
 #nomep
 {
     margin-left: 20px;

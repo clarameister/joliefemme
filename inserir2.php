@@ -3,7 +3,7 @@
     include("conecta.php");
     $dia = $_POST['dia'];
     $hora = $_POST['hora'];
-    $_SESSION = $_SESSION['id_clientes'];
+    $id_clientes = $_SESSION['id_clientes'];
 
     $comando = $pdo->prepare("INSERT INTO consultoria(dia, hora, id_clientes) VALUES(:dia, :hora, :id_clientes)");
     $comando->bindValue(":dia", $dia);

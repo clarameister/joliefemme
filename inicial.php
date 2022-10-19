@@ -51,7 +51,7 @@
                 ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR?
         </div>
         <div class="frases">
-                MARQUE UMA CONSULTA DE MODA!
+            <a href="consultoria.html"> MARQUE UMA CONSULTA DE MODA! </a>
         </div>
         <div class="frases">
                 POR APENAS R$50,00 + FRETE

@@ -13,9 +13,10 @@ $comando=$pdo->prepare("INSERT INTO produto(nome_prod,preco,imagem) VALUES (:nom
 
 $comando->bindValue(":nome_prod",$nome_prod);
 $comando->bindValue("preco",$preco);
-$comando->bindValue(":conteudo", $base64);
+$comando->bindValue(":conteudo", $base64);  
 $comando->execute();
 
 header("Location:inicial.php");
 unset($comando);
 unset($pdo);
+?>

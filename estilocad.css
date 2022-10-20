@@ -39,7 +39,7 @@ input[type=text]
     font-size: 20px;
     color: gray;
     background-color: white;
-    height: 48px;
+    height: 30px;
     width: 600px;
     border-style: solid;
     border-radius: 15px;
@@ -50,7 +50,7 @@ input[type=email]
     font-size: 20px;
     color: gray;
     background-color: white;
-    height: 48px;
+    height: 30px;
     width: 600px;
     border-style: solid;
     border-radius: 15px;
@@ -61,7 +61,7 @@ input[type=password]
     font-size: 20px;
     color: gray;
     background-color: white;
-    height: 48px;
+    height: 30px;
     width: 600px;
     border-style: solid;
     border-radius: 15px;
@@ -72,7 +72,7 @@ input[type=tel]
     font-size: 20px;
     color: gray;
     background-color: white;
-    height: 48px;
+    height: 30px;
     width: 600px;
     border-style: solid;
     border-radius: 15px;

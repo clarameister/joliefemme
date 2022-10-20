@@ -21,11 +21,15 @@
         <input type="file" id="meu_upload">
         <div class="frase"> Oiê!</div>
     </div>  
-    <button onclick="" class="sair">
-        Sair
-    </button>
-    <img src="seta.png" id="voltar">
+
+    <input type="submit" class="sair" value="Sair"></input>
+    
+
+    <a href="inicial.php"><img src="seta.png" id="voltar"></a>
+
+    
     <div class="pedidos"> Meus Pedidos:</div>
+
     <div class="conteudo">
     <?php
     

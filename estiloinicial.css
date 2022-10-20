@@ -120,3 +120,8 @@ body{
     margin-top: 30px;
     color: white;
 }
+a:link
+{
+    text-decoration: none;
+    color: white;
+}

@@ -40,7 +40,7 @@
      </div>
      
      <div class="p">
-     <img src="produtos.png" width="65%">
+     <a href="pcadastroitens.html"><img src="produtos.png" width="65%"></a>
      Cadastrar Produtos
     </div>
     
@@ -130,7 +130,9 @@
 </body>
  <script src="jquery.js"></script>
  <script> 
-
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
 function busca_imagem()
 {
     meu_upload.click();
@@ -150,7 +152,10 @@ function busca_imagem()
             reader.readAsDataURL(files[0]);
         }
     }
-
+    function abrir_pagina(arquivo)
+{
+    window.open(arquivo+"?usuario="+usuario,"_self")
+}
 
 </script>
 </html>

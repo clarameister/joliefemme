@@ -7,12 +7,48 @@
     <link rel="stylesheet" href="estilocadp.css">
     <title>Cadastro Itens</title>
 </head>
+<style>
+.caixas
+{
+    background-color: #D39999;
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 720px;
+    height: 600px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caixaimg
+{
+    background-color: #D39999;
+    color: white;
+    font-size: 20px;
+    margin-top: -600px;
+    margin-left: 700px;
+    width: 720px;
+    height: 600px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto
+{
+    color:#874C4C;
+    margin-top: 80px;
+    font-size: 30px;
+    width: 1600px;
+    margin-left: -70px;
+}
+</style>
 <body>
 
     <div class="texto">
         Cadastre o produto aqui:
     </div>
-        <img src="seta.png" id="voltar">
+       
     <form action="inserir3.php" method="POST" enctype="multipart/form-data">   
     <div class="caixas">
         <div id="nomep"> <input type="text" name="nome_prod" id="nome" value="" placeholder="Insira o nome do produto"> </div>

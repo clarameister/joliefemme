@@ -3,29 +3,6 @@ body
     background-color: #F1D4D4;
     overflow: hidden;
 }
-.texto
-{
-    color:#874C4C;
-    margin-top: 80px;
-    font-size: 30px;
-    width: 1600px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-.caixas
-{
-    background-color: #D39999;
-    margin-top: 70px;
-    margin-left: 65px;
-    width: 720px;
-    height: 600px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #meu_upload
 {
     display: none;
@@ -51,20 +28,6 @@ input[type=submit]
     border-width: 2px;
     border-color: #874C4C;
     border-radius: 15px;
-}
-.caixaimg
-{
-    background-color: #D39999;
-    color: white;
-    font-size: 20px;
-    margin-top: -600px;
-    margin-left: 801px;
-    width: 720px;
-    height: 600px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 #imagem
 {

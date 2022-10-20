@@ -28,7 +28,7 @@ $comando->bindValue(":estado", $estado);
 $comando->execute();
 
 
-header("Location: inicial.php");
+header("Location: login.html");
 
 
 unset($comando);

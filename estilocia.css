@@ -17,6 +17,13 @@ body
     justify-content: center;
     text-align: center;
 }
+#seta 
+{
+    width: 40px;
+    height: 40px;
+    margin-top: 23px;
+    margin-left: 33px;
+}
 .quadrado
 {
     margin-left: 308px;

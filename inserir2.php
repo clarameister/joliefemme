@@ -12,7 +12,7 @@
     $comando->execute();
 
     header("Location:inicial.php");
-    //echo("Consultoria marcada!");
+    echo("Consultoria marcada!");
 
     unset($comando);
     unset($pdo);

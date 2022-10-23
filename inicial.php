@@ -29,6 +29,135 @@
 .table 
 {
     margin-left: 211px;
+    
+}
+
+body{
+    background-color: rgb(241,212,212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    margin:0%;
+    overflow: hidden;
+}
+.retangulo1
+{
+    height: 70px;  
+    width: 100%; 
+    background-color: rgb(211, 153, 153, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nome
+{
+    font-size: 30px;
+    color: white;
+    display: flex;
+    position: absolute;
+    margin-left: 590px;
+}
+.conteudo1
+{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content:space-between;
+    justify-items: center;
+}
+.icone_carrinho
+{
+    background-color: rgb(211, 153, 153, 1);
+    width: 10%;
+    height: 70px;
+}
+.logotipo
+{ 
+    width: 100px;
+    height: 100px;
+}
+.carrinho
+{
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -5px;
+}
+.icone
+{
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -67px;
+}
+.retangulo2
+{
+    width: 100%;
+    height: 58px;
+    background-color: rgb(181, 119, 119);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content:space-between;
+    justify-items: center;
+}
+.conteudo2
+{
+    width:100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+.divpromocao
+{
+    background-color: rgb(254, 234, 234);
+    width: 70%;
+    height: 80%;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content:center;
+    justify-items: center; 
+    z-index: 1;
+}
+.consul
+{
+    background-color: rgb(254,234,234);
+    width:18%;
+    height: 80%;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+.escuro
+{
+    background-color: rgb(181, 119, 119);
+    margin: 20px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.frases
+{
+    width: 90%;
+    margin-top: 30px;
+    color: white;
+}
+a:link
+{
+    text-decoration: none;
+    color: white;
 }
 </style>
 <body>
@@ -65,7 +194,6 @@
        
     <div class="conteudo2">
         <div class="divpromocao">
-        
     <table class="table">
         <tbody>
             <?php

@@ -14,6 +14,177 @@
     <link rel="stylesheet" href="estiloperfil.css">
     <title>Perfil</title>
 </head>
+<style>
+body
+{
+    background-color: rgb(241,212,212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:100vh;
+    margin:0%;
+    overflow: hidden;
+}
+.retangulo1
+{
+    background-color: rgb(211,153, 153);
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    justify-items: flex-start;
+}
+.sair
+{
+    background-color:rgb(222, 150, 150);
+    width: 100px;
+    margin-top: -40px;
+    margin-left: 1000px;
+}
+.frase
+{
+    color: rgb(135,76,76);
+    font-size: 25px;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 125px;
+}
+#meu_upload
+{
+    display: none;
+}
+#imagem
+{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 61px;
+}
+#voltar 
+{
+    width: 40px;
+    height: 40px;
+    margin-left: -735px;
+    margin-top: 78px;
+}
+.pedidos
+{
+    color: rgb(135,76,76);
+    font-size: 25px;
+    position: absolute;
+    top: 89px;
+    left: 239px;
+}
+.conteudo
+{
+    width: 70%;
+    height: 15%;
+    margin-top: 63px;
+    margin-left: 6px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.p
+{
+    background-color: rgb(222,182,182);
+    border-radius: 15px;
+    width: 132px;
+    height: 136px;
+    font-size: 24px;
+    color:rgb(135,76,76);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding:10px;
+    margin-left: 40px;
+}
+.dados
+{
+    color: rgb(135,76,76);
+    font-size: 25px;
+    position: absolute;
+    top: 510px;
+    left: 239px;
+}
+.lapis
+{
+    position: absolute;
+    top: 1px;
+    left: 140px;
+}
+.conteudo2
+{
+    width: 70%;
+    color: rgb(135,76,76);
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 220px;
+}
+.nse
+{
+    font-size: 25px;
+    width: 50%;
+}
+.etc
+{
+    font-size: 25px;
+    width: 50%;
+}
+#nome
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#email
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#endereco
+{
+    border-radius: 12px;
+    width:340px;
+    height: 17px;
+}
+#senha
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#telefone
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+#cpf
+{
+    border-radius: 12px;
+    width:371px;
+    height: 17px;
+}
+input
+{
+    border-color: white;
+    border-style: solid;
+    border-radius: 22px;
+    border-width: 2px;
+}
+
+</style>
 <body>
 
     <div class="retangulo1">

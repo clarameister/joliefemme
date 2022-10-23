@@ -6,33 +6,131 @@
     <link rel="stylesheet" href="estilolog.css">
     <title>Login</title>
 </head>
+<style>
+body
+{
+    background-color: #F1D4D4;
+    overflow: hidden;
+}
+.ret1
+{
+    width: 534px;
+    height: 900px;
+    margin-top: -8px;
+    margin-left: -12px;
+    background-color: #D39999;
+}
+#imagem
+{
+    width: 400px;
+    margin-left: 153px;
+    margin-top: -85px;
+}
+.ret2
+{
+    margin-left: 588px;
+    margin-top: -757px;
+    width: 700px;
+    height: 700px;
+
+}
+#lg
+{
+    position: relative;
+    margin-top: -82px;
+    margin-left: 270px;
+    color: #874C4C;
+    font-size: 25px;
+    margin-left: 121px;
+}
+#bv
+{
+    width: 288px;
+    margin-top: 9px;
+    height: 200px;
+    color: white;
+    font-size: 50px;
+    margin-left: 123px;
+}
+#ac
+{
+    position: relative;
+    color: white;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-top: -77px;
+    margin-left: 105px;
+}
+a
+{
+    position: relative;
+    color: white;
+    background-color: #D39999;
+    border-color: #D39999;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-left: 178px;
+}
+input[type=password] 
+{
+    font-size: 20px;
+    color: gray;
+    background-color: white;
+    height: 48px;
+    width: 600px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    margin-left: 44px;
+    margin-top: 20px;
+}
+input[type=text] 
+{
+    font-size: 20px;
+    color: gray;
+    background-color: white;
+    height: 48px;
+    width: 600px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    margin-left: 44px;
+    margin-top: -88px;
+}
+input[type=submit]
+{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    background-color: #D39999;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #D39999;
+    margin-top: 22px;
+    margin-left: 218px;
+}
+</style>
 <body>
-    
-    <div class="logo"><img src="logotipo_joliefemme.png" id="imagem"></div>
-   
-    <div id="ret2">
-        <div id="lg">
-            LOGIN  
+        <div class="ret1">
+            <div id="bv">
+                BEM VINDO DE VOLTA!
+            </div>
+            <div id="ac">
+                AINDA NÃO TEM UMA CONTA?
+            </div>
+            <a href="cadastro.html">CADASTRE-SE</a>
         </div>
-        <br><br>
+        <div class="ret2">
+            <img class="logo" src="logotipo_joliefemme.png" id="imagem">
+            <br><br>
         <div class="campos">
             <form action="login.php" method="POST">
             <input type="text" name="email" value="" placeholder="E-mail" /> 
-            <br> <br> <br>
             <input type="password" name="senha" value="" placeholder="Senha" /> 
             <input type="submit" value="ENTRAR">
         </form>
         </div>
-    </div>
-    <div id="ret1">
-        <div id="bv">
-            BEM VINDO DE VOLTA!
         </div>
-        <div id="ac">
-            AINDA NÃO TEM UMA CONTA?
-        </div>
-        <a href="cadastro.html">CADASTRE-SE</a>
-    </div>
-
 </body>
 </html>

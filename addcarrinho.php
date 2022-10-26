@@ -1,15 +1,25 @@
 <?php
 
-session_start();
+
 include("conecta.php");
 
-$qtd_produto = $_POST['qtd_produto'];
-$total_itens = $_POST['total_itens'];
-$carrinho_idcarrinho = $_POST['carrinho_idcarrinho'];
-$id_produto = $_POST['id_produto'];
+$id_produto = $_GET['id_produto'];
+$quantidade_prod = $_GET['quantidade_prod'];
+$total_carrinho = $_GET['total_carrinho'];
+$id_cliente = $_GET['id_cliente'];
 
-$comando = $pdo->prepare("SELECT qtd_produto, total_itens, carrinho_idcarrinho,  id_produto FROM itens_carrinho");
 
+echo("INSERT INTO carrinho VALUES($id_cliente,$id_produto,$quantidade_prod,$total_carrinho)");
+
+$comando = $pdo->prepare("INSERT INTO carrinho(id_cliente,id_produto,quantidade_prod,total_carrinho) VALUES(:c,:id,:q,:t)");
+$comando->bindValue(":c", $id_cliente);
+$comando->bindValue(":id", $id_produto);
+$comando->bindValue(":q", $quantidade_prod);
+$comando->bindValue(":t", $total_carrinho);
 $comando->execute();
 
 ?>
+<script>
+alert("PRODUTO INSERIDO NO CARRINHO");
+window.close();
+</script>

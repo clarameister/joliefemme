@@ -1,12 +1,16 @@
 <?php
 
-<<<<<<< Updated upstream
 include("conecta.php"); 
-=======
-include("conecta.php");
->>>>>>> Stashed changes
 
-$comando = $pdo->prepare("SELECT nome_prod, preco, imagem FROM produto");
+$comando = $pdo->prepare("SELECT * FROM produto");
 $comando->execute();
 
+if($comando->rowCount() >= 1){
+    $lista_produtos = $comando->fetchAll();
+}else{
+    echo 'Nenhum produto cadastrado!';
+}
+
+unset($comando);
+unset($pdo);
 ?>

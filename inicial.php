@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
-   .link
+.link
 {
-<<<<<<< Updated upstream
+
     color: white;
 } 
 .bolsa
@@ -160,14 +160,6 @@ a:link
     text-decoration: none;
     color: white;
 }
-=======
-    color: white !important;
-} 
-    .bolsa
-    {
-        width: 200px;
-    }
->>>>>>> Stashed changes
 </style>
 <body>
     <?php
@@ -182,7 +174,7 @@ a:link
                 <img src="logotipo.png" class="logotipo" ><div id="nome"> JOLIE FEMME </div>
             </div>
             <div class="icone_carrinho">
-                <img src="carrinho.png" onclick="abrir_pagina('carrinho.html')" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
+                <img src="carrinho.png" onclick="abrir_pagina('carrinho.php')" class="carrinho" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
                 <img src="icone-perfil.png" onclick="abrir_pagina('perfil.php')" class="icone" width="50px" onclick="abrir_pagina('/*depende do que a pessoa pesquisar*/ ')">
             </div>
     </div>
@@ -203,40 +195,18 @@ a:link
        
     <div class="conteudo2">
         <div class="divpromocao">
-<<<<<<< Updated upstream
     <table class="table">
-=======
-        <h3>Nossas Novidades</h3>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Fotos</th>
-                <th>Nome</th>
-                <th>Preço</th>
-            </tr>
-        </thead>
->>>>>>> Stashed changes
         <tbody>
             <?php
             include("listar_produtos.php");
             
-<<<<<<< Updated upstream
             if (!empty($lista_produtos)) {
               
                 foreach ($lista_produtos as $linha) {?>
                     <tr class="tr">
-                    <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?> </td>
-                    <td class="td"> <?php echo $linha['nome_prod']; ?></td>
-                    <td class="td"> <?php echo $linha['preco']; ?></td>
-=======
-            if (!empty($resultado)) {
-              
-                foreach ($resultado as $linha) {?>
-                    <tr>
-                    <td> <?php echo $linha['imagem']; ?></td>
-                    <td> <?php echo $linha['nome_prod']; ?></td>
-                    <td> <?php echo $linha['preco']; ?></td>
->>>>>>> Stashed changes
+                    <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?>  </td>
+                    <td class="td"> <?php echo $linha['nome_prod']; ?>  </td>
+                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>',<?php echo($_SESSION['idcliente']);  ?>);">X</button> </td>
                     </tr>
                 <?php }
             }
@@ -248,10 +218,6 @@ a:link
         <div class="escuro">
             <br>
             <img src="bolsa.png" class="bolsa">
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         <div class="frases">
                 ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR?
         </div>
@@ -274,6 +240,12 @@ console.log(usuario)
     function abrir_pagina(arquivo)
 {
     window.open(arquivo+"?usuario="+usuario,"_self")
+}
+
+function InserirCarrinho(idproduto,qtde,preco,idcliente)
+{
+    var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente;
+    window.open(url,"_blank");
 }
     </script>
 </html>

@@ -27,13 +27,7 @@ $comando->bindValue(":cidade", $cidade);
 $comando->bindValue(":estado", $estado);
 $comando->execute();
 
-
-<<<<<<< Updated upstream
-header("Location: login.html");
-=======
-header("Location:inicial.php");
->>>>>>> Stashed changes
-
+header("Location:login.html");
 
 unset($comando);
 unset($pdo);

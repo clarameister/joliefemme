@@ -69,6 +69,13 @@ body
     margin-left: -1542px;
 }
 </style>
+
+<?php
+session_start();
+$id_cliente = $_SESSION['idcliente'];
+include("listar_carrinho.php"); 
+?>
+
 <body>
         <div class="retangulo1">
                 <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
@@ -76,7 +83,57 @@ body
                 <div class="frase"> Oi!! Pronto para comprar?</div>
         </div>
 
-        <img src="seta.png" width="2%" class="voltar">
-</body>
 
+<table width="80%" border="1">
+    <tr>
+
+    <?php 
+       if($_SESSION['nivel_admin']==0)
+       {
+           
+            echo("
+            <td>Cód. Compra</td>
+            <td>Cód. Cliente</td>
+            ");
+       }
+       ?>
+
+        <td>Cód. Produto</td>
+        <td>Cód. Quantidade</td>
+        <td>Cód. Total (R$)</td>
+    </tr>
+
+<?php
+
+if (!empty($lista_produtos)) {
+              
+    foreach ($lista_produtos as $linha) {?>
+        <tr class="tr">
+
+       <?php 
+       if($_SESSION['nivel_admin']==0)
+       {
+            $t1 = $linha["idcarrinho"];   
+            $t2=$linha["id_cliente"];
+            echo("
+                <td class='td'>$t1</td>
+                <td class='td'>$t2</td>
+            ");
+       }
+       ?>
+        <td class="td"> <?php echo($linha['id_produto']);?> </td>
+        <td class="td"> <?php echo($linha['quantidade']);?> </td>
+        <td class="td"> <?php echo($linha['total']);?> </td>
+       
+        </tr>
+    <?php }
+}
+
+?>
+        
+</table>
+
+
+       
+</body>
 </html>

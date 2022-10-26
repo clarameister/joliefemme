@@ -28,7 +28,11 @@ $comando->bindValue(":estado", $estado);
 $comando->execute();
 
 
+<<<<<<< Updated upstream
 header("Location: login.html");
+=======
+header("Location:inicial.php");
+>>>>>>> Stashed changes
 
 
 unset($comando);

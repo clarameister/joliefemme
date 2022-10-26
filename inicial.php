@@ -9,6 +9,7 @@
 <style>
    .link
 {
+<<<<<<< Updated upstream
     color: white;
 } 
 .bolsa
@@ -159,6 +160,14 @@ a:link
     text-decoration: none;
     color: white;
 }
+=======
+    color: white !important;
+} 
+    .bolsa
+    {
+        width: 200px;
+    }
+>>>>>>> Stashed changes
 </style>
 <body>
     <?php
@@ -194,11 +203,24 @@ a:link
        
     <div class="conteudo2">
         <div class="divpromocao">
+<<<<<<< Updated upstream
     <table class="table">
+=======
+        <h3>Nossas Novidades</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fotos</th>
+                <th>Nome</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+>>>>>>> Stashed changes
         <tbody>
             <?php
             include("listar_produtos.php");
             
+<<<<<<< Updated upstream
             if (!empty($lista_produtos)) {
               
                 foreach ($lista_produtos as $linha) {?>
@@ -206,6 +228,15 @@ a:link
                     <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?> </td>
                     <td class="td"> <?php echo $linha['nome_prod']; ?></td>
                     <td class="td"> <?php echo $linha['preco']; ?></td>
+=======
+            if (!empty($resultado)) {
+              
+                foreach ($resultado as $linha) {?>
+                    <tr>
+                    <td> <?php echo $linha['imagem']; ?></td>
+                    <td> <?php echo $linha['nome_prod']; ?></td>
+                    <td> <?php echo $linha['preco']; ?></td>
+>>>>>>> Stashed changes
                     </tr>
                 <?php }
             }
@@ -217,7 +248,10 @@ a:link
         <div class="escuro">
             <br>
             <img src="bolsa.png" class="bolsa">
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         <div class="frases">
                 ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR?
         </div>

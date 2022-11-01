@@ -19,12 +19,13 @@ $comando->execute();
 if($comando->rowCount() >= 1){
     $lista_produtos = $comando->fetchAll();
 }else{
-    echo 'Nenhum produto cadastrado!';
+    echo ('Nenhum produto cadastrado!');
 }
 
 unset($comando);
 unset($pdo);
 
+<<<<<<< Updated upstream
 if($comando->rowCount() >= 1)
     {
         $lista_produtos = $comando->fetchAll();
@@ -34,6 +35,9 @@ if($comando->rowCount() >= 1)
     unset($comando);
     unset($pdo);
 <<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 =======
 >>>>>>> Stashed changes

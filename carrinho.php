@@ -80,7 +80,7 @@ include("listar_carrinho.php");
         <div class="retangulo1">
                 <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
                 <input type="file" id="meu_upload">
-                <div class="frase"> Oi!! Pronto para comprar?</div>
+                <div class="frase"> Oi!! Esse é o seu carrinho</div>
         </div>
 
 
@@ -98,9 +98,11 @@ include("listar_carrinho.php");
        }
        ?>
 
-        <td>Cód. Produto</td>
-        <td>Cód. Quantidade</td>
-        <td>Cód. Total (R$)</td>
+        <td>Cód.Produto</td>
+        <td>Nome Produto</td>
+        <td>Quantidade</td>
+        <td>Total (R$)</td>
+    
     </tr>
 
 <?php
@@ -122,6 +124,7 @@ if (!empty($lista_produtos)) {
        }
        ?>
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
+        <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
         <td class="td"> <?php echo($linha['total']);?> </td>
        
@@ -132,7 +135,9 @@ if (!empty($lista_produtos)) {
 ?>
         
 </table>
+<script>
 
+</script>
 
        
 </body>

@@ -206,7 +206,7 @@ a:link
                     <tr class="tr">
                     <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?>  </td>
                     <td class="td"> <?php echo $linha['nome_prod']; ?>  </td>
-                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>',<?php echo($_SESSION['idcliente']);  ?>);">X</button> </td>
+                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>','<?php echo($_SESSION['idcliente']); ?>','<?php echo($_SESSION['nome_produto']); ?>');">X</button></td>
                     </tr>
                 <?php }
             }
@@ -242,9 +242,9 @@ console.log(usuario)
     window.open(arquivo+"?usuario="+usuario,"_self")
 }
 
-function InserirCarrinho(idproduto,qtde,preco,idcliente)
+function InserirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
 {
-    var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente;
+    var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente+"&nome_produto="+nome_produto;
     window.open(url,"_blank");
 }
     </script>

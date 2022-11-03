@@ -82,7 +82,7 @@ include("listar_carrinho.php");
                 <input type="file" id="meu_upload">
                 <div class="frase"> Oi!! Esse é o seu carrinho</div>
         </div>
-
+        <a href="inicial.php"><img src="seta.png" class="voltar"></a>
 
 <table width="80%" border="1">
     <tr>

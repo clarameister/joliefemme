@@ -206,7 +206,7 @@ a:link
                     <tr class="tr">
                     <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?>  </td>
                     <td class="td"> <?php echo $linha['nome_prod']; ?>  </td>
-                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>','<?php echo($_SESSION['idcliente']); ?>','<?php echo($_SESSION['nome_produto']); ?>');">X</button></td>
+                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>','<?php echo($_SESSION['idcliente']); ?>','<?php echo($_SESSION['nome_produto']); ?>');">+</button></td>
                     </tr>
                 <?php }
             }

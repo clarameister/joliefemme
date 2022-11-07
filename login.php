@@ -25,6 +25,7 @@
 
             
             $_SESSION['idcliente'] = $resultado['idcliente'];
+            $_SESSION['nome_produto'] = $resultado['nome_prod'];
             $_SESSION['senha'] = $resultado['senha'];
             $_SESSION['nivel_admin'] = $resultado['nivel_admin'];
             $_SESSION['loggedin'] = true;

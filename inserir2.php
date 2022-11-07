@@ -12,8 +12,12 @@
     $comando->execute();
 
     header("Location:inicial.php");
-    echo("Consultoria marcada!");
 
     unset($comando);
     unset($pdo);
 ?>
+
+<script>
+    alert("CONSULTORIA MARCADA!");
+    window.close();
+</script>

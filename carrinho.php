@@ -57,7 +57,7 @@ body
 .voltar
 {
     position: absolute;
-    margin-left: -768px;
+    margin-left: -740px;
     margin-top: 16px;
 }
 #car
@@ -67,6 +67,13 @@ body
     height: 30px;
     margin-top: 220px;
     margin-left: -1542px;
+}
+table
+{
+    margin-top: 50px;
+    border-color: #874C4C;
+    color: #874C4C;
+    background-color: #FFE6EE;
 }
 </style>
 
@@ -80,9 +87,9 @@ include("listar_carrinho.php");
         <div class="retangulo1">
                 <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
                 <input type="file" id="meu_upload">
-                <div class="frase"> Oi!! Pronto para comprar?</div>
+                <div class="frase"> Oi!! Esse é o seu carrinho</div>
         </div>
-
+        <a href="inicial.php"><img src="seta.png" class="voltar"></a>
 
 <table width="80%" border="1">
     <tr>
@@ -98,9 +105,9 @@ include("listar_carrinho.php");
        }
        ?>
 
-        <td>Cód. Produto</td>
-        <td>Cód. Quantidade</td>
-        <td>Cód. Total (R$)</td>
+        <td> Produto</td>
+        <td> Quantidade</td>
+        <td> Total (R$)</td>
     </tr>
 
 <?php
@@ -114,7 +121,7 @@ if (!empty($lista_produtos)) {
        if($_SESSION['nivel_admin']==0)
        {
             $t1 = $linha["idcarrinho"];   
-            $t2=$linha["id_cliente"];
+            $t2 = $linha["id_cliente"];
             echo("
                 <td class='td'>$t1</td>
                 <td class='td'>$t2</td>
@@ -122,18 +129,14 @@ if (!empty($lista_produtos)) {
        }
        ?>
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
+        <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
-        <td class="td"> <?php echo($linha['total']);?> </td>
+        <td class="td"> <?php echo($linha['total']);?> <button onclick="ExcluirCarrinho('<?php echo($linha['idproduto']); ?>','<?php echo($linha['idcarrinho']); ?>');">X</button></td>
        
         </tr>
     <?php }
 }
-
-?>
-        
-</table>
-
-
-       
+?>   
+</table>   
 </body>
 </html>

@@ -255,9 +255,9 @@ console.log(usuario)
     window.open(arquivo+"?usuario="+usuario,"_self")
 }
 
-function InserirCarrinho(idproduto,qtde,preco,idcliente)
+function InserirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
 {
-    var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente;
+    var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente+"&nome_produto="+nome_produto;
     window.open(url,"_blank");
 }
     </script>

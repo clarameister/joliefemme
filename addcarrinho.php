@@ -1,6 +1,5 @@
 <?php
 
-
 include("conecta.php");
 
 $id_produto = $_GET['id_produto'];

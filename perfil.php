@@ -109,7 +109,7 @@ body
     color: rgb(135,76,76);
     font-size: 25px;
     position: absolute;
-    top: 510px;
+    top: 410px;
     left: 239px;
 }
 .lapis
@@ -183,11 +183,22 @@ input
     border-radius: 22px;
     border-width: 2px;
 }
-
+.link
+{
+     color: rgb(135,76,76);
+}
+.voltar
+{
+    width: 40px;
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 11px;
+}
 </style>
 <body>
 
     <div class="retangulo1">
+    <a href="inicial.php"><img src="voltar.png" class="voltar"></a>
         <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
         <input type="file" id="meu_upload">
         <div class="frase"> Oiê!</div>
@@ -196,7 +207,7 @@ input
     <input type="submit" class="sair" value="Sair"></input>
     
 
-    <a href="inicial.php"><img src="seta.png" id="voltar"></a>
+    
 
     
     <div class="pedidos"> Meus Pedidos:</div>
@@ -205,32 +216,44 @@ input
     <?php
     
     if($_SESSION['nivel_admin'] == 1){
-        echo '<div class="p">
+        echo '
+        <a href="carrinho.php" class="link">
+        <div class="p">
         <img src="caixa.png" width="70%" >
         Pedidos
      </div>
-     
+    </a>
+
+     <a href="pcadastroitens.html" class="link">
      <div class="p">
-     <a href="pcadastroitens.html"><img src="produtos.png" width="65%"></a>
+     <img src="produtos.png" width="70%" >
      Cadastrar Produtos
     </div>
-    
+    </a>
+
+    <a href="consultoria.html" class="link">
     <div class="p" >
     <img src="calendario.png" width="60%">
     Consultorias
-    </div>';
+    </div>
+    </a>';
     }
     else
     {
-        echo '<div class="p">
+        echo '
+        <a href="carrinho.php" class="link">
+        <div class="p">
         <img src="caixa.png" width="70%" >
         Pedidos
      </div>
-        
-        <div class="p" >
+    </a>
+        <a href="consultoria.html" class="link">
+        <div class="p">
         <img src="calendario.png" width="63%">
         Consultorias
-        </div>';
+        </div>
+        </a>'
+        ;
     }
     ?>
     </div>
@@ -299,8 +322,8 @@ input
             </div>  
         </div>
 </body>
- <script src="jquery.js"></script>
- <script> 
+<script src="jquery.js"></script>
+<script> 
 var variaveis = new URLSearchParams(location.search);
 var usuario = variaveis.get("usuario");
 console.log(usuario)
@@ -323,10 +346,7 @@ function busca_imagem()
             reader.readAsDataURL(files[0]);
         }
     }
-    function abrir_pagina(arquivo)
-{
-    window.open(arquivo+"?usuario="+usuario,"_self")
-}
+
 
 </script>
 </html>

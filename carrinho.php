@@ -75,6 +75,21 @@ table
     color: #874C4C;
     background-color: #FFE6EE;
 }
+button
+{
+    color: #874C4C;
+    border-color: #874C4C;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+.voltar
+{
+    width: 40px;
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 11px;
+}
 </style>
 
 <?php
@@ -85,25 +100,16 @@ include("listar_carrinho.php");
 
 <body>
         <div class="retangulo1">
+        <a href="inicial.php"><img src="voltar.png" class="voltar"></a>
                 <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
                 <input type="file" id="meu_upload">
                 <div class="frase"> Oi!! Esse é o seu carrinho</div>
         </div>
-        <a href="inicial.php"><img src="seta.png" class="voltar"></a>
+        
 
 <table width="80%" border="1">
     <tr>
 
-    <?php 
-       if($_SESSION['nivel_admin']==0)
-       {
-           
-            echo("
-            <td>Cód. Compra</td>
-            <td>Cód. Cliente</td>
-            ");
-       }
-       ?>
 
         <td> Produto</td>
         <td> Quantidade</td>
@@ -117,6 +123,7 @@ if (!empty($lista_produtos)) {
               
     foreach ($lista_produtos as $linha) {?>
         <tr class="tr">
+<<<<<<< Updated upstream
 
        <?php 
        if($_SESSION['nivel_admin']==0)
@@ -130,9 +137,11 @@ if (!empty($lista_produtos)) {
        }
        ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
+=======
+>>>>>>> Stashed changes
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
-        <td class="td"> <?php echo($linha['total']);?> <button onclick="ExcluirCarrinho('<?php echo($linha['idproduto']); ?>','<?php echo($linha['idcarrinho']); ?>');">X</button></td>
+        <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td>
        
         </tr>
     <?php }
@@ -142,6 +151,7 @@ if (!empty($lista_produtos)) {
 </body>
 <script src="jquery.js"></script>
 <script>
+<<<<<<< Updated upstream
 var variaveis = new URLSearchParams(location.search);
 var usuario = variaveis.get("usuario");
 console.log(usuario)
@@ -157,4 +167,11 @@ function ExcluirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
     window.open(url,"_blank");
 }
     </script>
+=======
+function ExcluirCarrinho(idcarrinho)
+{
+    window.open("ExcluirCarrinho.php?idcarrinho="+idcarrinho,"_self");
+}
+</script>
+>>>>>>> Stashed changes
 </html>

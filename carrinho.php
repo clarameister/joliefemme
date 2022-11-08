@@ -108,6 +108,7 @@ include("listar_carrinho.php");
         <td> Produto</td>
         <td> Quantidade</td>
         <td> Total (R$)</td>
+
     </tr>
 
 <?php
@@ -127,7 +128,7 @@ if (!empty($lista_produtos)) {
                 <td class='td'>$t2</td>
             ");
        }
-       ?>
+       ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
@@ -139,4 +140,21 @@ if (!empty($lista_produtos)) {
 ?>   
 </table>   
 </body>
+<script src="jquery.js"></script>
+<script>
+var variaveis = new URLSearchParams(location.search);
+var usuario = variaveis.get("usuario");
+console.log(usuario)
+
+    function abrir_pagina(arquivo)
+{
+    window.open(arquivo+"?usuario="+usuario,"_self")
+}
+
+function ExcluirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
+{
+    var url = "delcarrinho.php?;
+    window.open(url,"_blank");
+}
+    </script>
 </html>

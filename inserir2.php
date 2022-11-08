@@ -19,5 +19,4 @@
 
 <script>
     alert("CONSULTORIA MARCADA!");
-    window.close();
 </script>

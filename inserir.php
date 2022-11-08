@@ -11,8 +11,6 @@ $bairro= $_POST["bairro"];
 $cidade= $_POST["cidade"];
 $estado= $_POST["estado"];
 
-
-
 $comando = $pdo -> prepare("INSERT INTO cliente(nome,senha,cpf,email,telefone,rua,numero,bairro,cidade,estado) VALUES(:nome,:senha,:cpf,:email,:telefone,:rua,:numero,:bairro,:cidade,:estado)");
 
 $comando->bindValue(":nome", $nome);

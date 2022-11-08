@@ -1,10 +1,1 @@
-<input type="text" name="cidade" value="" placeholder="Cidade" /> 
-        <br><br>
-        <input type="text" name="rua" value="" placeholder="Rua" /> 
-        <br><br>
-        <input type="text" name="numero" value="" placeholder="Número" /> 
-        <br><br>
-        <input type="text" name="estado" value="" placeholder="Estado" /> 
-        <br><br>
-        <input type="text" name="bairro" value="" placeholder="Bairro" /> 
-        <br><br>
+<a href="redefinir.html" class="redf"> Redefinir senha </a>

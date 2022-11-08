@@ -177,9 +177,10 @@ a:link
 <body>
     <?php
         session_start();
+        $usuario =  $_SESSION['idcliente'];
         if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             header("location: login.html");
-                exit;
+            exit;
         }
     ?>
     <div class="conteudo1"> 
@@ -218,8 +219,8 @@ a:link
                 foreach ($lista_produtos as $linha) {?>
                     <tr class="tr">
                     <td class="td"> <?php echo '<img height="90px" width="90px" src="' .$linha['imagem']. '">'; ?>  </td>
-                    <td class="td"> <?php echo $linha['nome_produto']; ?>  </td>
-                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['id_produto']); ?>',1,'<?php echo($linha['preco']); ?>',<?php echo($_SESSION['idcliente']);  ?>,'<?php echo($linha['nome_produto']); ?>');">+</button> </td>
+                    <td class="td"> <?php echo $linha['nome_prod']; ?>  </td>
+                    <td class="td"> <?php echo $linha['preco']; ?> <button onclick="InserirCarrinho('<?php echo($linha['idproduto']); ?>',1,'<?php echo($linha['preco']); ?>',<?php echo($_SESSION['idcliente']);  ?>,'<?php echo($linha['nome_prod']); ?>');">+</button> </td>
                     </tr>
                 <?php }
             }
@@ -246,6 +247,10 @@ a:link
 </body>
 <script src="jquery.js"></script>
 <script>
+function abrir_pagina(arquivo)
+{
+    window.open(arquivo+"?usuario=<?php echo($usuario);?>","_self");
+}
 function InserirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
 {
     var url = "addcarrinho.php?id_produto="+idproduto+"&quantidade_prod="+qtde+"&total_carrinho="+preco+"&id_cliente="+idcliente+"&nome_produto="+nome_produto;

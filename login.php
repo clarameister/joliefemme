@@ -22,7 +22,6 @@
         if ($resultado['senha'] == $set_senha) {
             
             session_start();
-
             
             $_SESSION['idcliente'] = $resultado['idcliente'];
             $_SESSION['nome_produto'] = $resultado['nome_prod'];

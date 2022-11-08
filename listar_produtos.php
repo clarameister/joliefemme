@@ -2,7 +2,7 @@
 
 include("conecta.php");
 
-$comando = $pdo->prepare("SELECT id_produto,nome_produto, preco, imagem FROM produto");
+$comando = $pdo->prepare("SELECT idproduto, nome_prod, preco, imagem FROM produto");
 
 $comando->execute();
 

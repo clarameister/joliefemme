@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Redefinir senha</title>
     <style>
-    body{
+    body
+    {
         background-color: #F1D4D4;
     }
-    .titulo{
+    .titulo
+    {
         color: #874C4C;
         font-size: 30px;
         display: flex;
@@ -17,21 +19,29 @@
         flex-direction: column;
         margin-top: 60px;
     }
-    .campos{
+    .campos
+    {
         margin-left: 660px;
-        margin-top: 80px;
+        margin-top: 50px;
     }
-    input[type=text]{
+    .cont
+    {
+        margin-top: 230px;
+    }
+    input[type=text]
+    {
         border-color: #874C4C;
         background-color: white;
         border-radius: 15px;
         border-width: 2px;
         border-style: solid;
-        width: 259px;
+        width: 441px;
         height: 25px;
         margin-top: 5px;
+        margin-left: -101px;
     }
-    input[type=submit]{
+    input[type=submit]
+    {
         border-color: #874C4C;
         background-color: #874C4C;
         border-radius: 15px;
@@ -44,33 +54,17 @@
     </style>
 </head>
 <body>
+    <div class="cont">
     <div class="titulo">
         Redefina sua senha:
     </div>
+    <form action="redefinir.php">
     <div class="campos">
         <input type="text" placeholder="Senha atual"><br>
         <input type="text" placeholder="Nova senha"><br>
         <input type="submit" value="Redefinir">
     </div>
+</form>
+</div>
 </body>
-
-<?php
-session_start();
-include("conecta.php");
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
-}
-
-$senha = $_POST["senha"];
-$idcliente = $_POST["idcliente"]
-$comando = $pdo -> prepare("UPDATE cliente SET senha = '$senha' WHERE idcliente ='$idcliente'");
-$comando->bindValue(":senha", $senha);
-$comando->bindValue(":idcliente", $idcliente);
-
-header("Location:login.html");
-unset($comando);
-unset($pdo);    
-?>
- 
 </html>

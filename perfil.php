@@ -171,7 +171,7 @@ input {
     align-items: center;
     flex-direction: column;
     margin-top: 60px;
-    margin-left: 430px;
+    margin-left: 569px;
 }
 
 .campos {
@@ -181,7 +181,7 @@ input {
 
 .cont {
     margin-top: 140px;
-    margin-left: -543px;
+    margin-left: -620px;
 }
 
 input[type=text] {
@@ -217,7 +217,7 @@ input[type=text] {
         <div class="frase"> Oiê!</div>
     </div>
 
-    <input type="submit" class="sair" value="Sair"></input>
+    <input type="submit" class="sair" value="Sair">
     <div class="tudo">
     <div class="conteudo">
         <?php

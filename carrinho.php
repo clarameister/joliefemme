@@ -72,8 +72,11 @@ table
 {
     margin-top: 50px;
     border-color: #874C4C;
+    border-style: solid;
+    border-width: 2px;
     color: #874C4C;
-    background-color: #FFE6EE;
+    background-color: #FFF0F5;
+    font-size: 18px;
 }
 button
 {
@@ -82,6 +85,7 @@ button
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
+    background-color: white;
 }
 .voltar
 {
@@ -103,7 +107,7 @@ include("listar_carrinho.php");
         <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
                 <img onclick="busca_imagem();" id="imagem" src="pessoas.png" width="50px">
                 <input type="file" id="meu_upload">
-                <div class="frase"> Oi!! Esse é o seu carrinho</div>
+                <div class="frase"> Oi!! Esse é o seu carrinho.</div>
         </div>
         
 
@@ -112,11 +116,12 @@ include("listar_carrinho.php");
     <?php
          if($_SESSION['nivel_admin']==1)
          {    
-            echo("<td> Idcliente</td>");
+            //echo("<td> Idcliente </td>");
          }
         ?>
        
-        <td> Produto</td>
+        <td> Id Produto</td>
+        <td> Nome Produto</td>
         <td> Quantidade</td>
         <td> Total (R$)</td>
 
@@ -127,32 +132,20 @@ include("listar_carrinho.php");
 if (!empty($lista_produtos)) {
               
     foreach ($lista_produtos as $linha) {?>
-<<<<<<< Updated upstream
         <tr class="tr">
 
        <?php 
        if($_SESSION['nivel_admin']==0)
        {
-            $t1 = $linha["idcarrinho"];   
-            $t2 = $linha["id_cliente"];
-            echo("
-                <td class='td'>$t1</td>
-                <td class='td'>$t2</td>
-            ");
+            //$t1 = $linha["idcarrinho"];   
+            //$t2 = $linha["id_cliente"];
+            //echo("
+               //<td class='td'>$t1</td>
+               //<td class='td'>$t2</td>
+            //");
        }
        ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
-=======
-        <tr class="tr"> 
-        <?php
-         if($_SESSION['nivel_admin']==1)
-         { 
-            $id_cliente=$linha['id_cliente'];
-            echo("<td class='td'> $id_cliente </td>");
-         }
-        ?>
-        
->>>>>>> Stashed changes
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
         <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td> 

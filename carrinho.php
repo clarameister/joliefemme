@@ -123,7 +123,6 @@ if (!empty($lista_produtos)) {
               
     foreach ($lista_produtos as $linha) {?>
         <tr class="tr">
-<<<<<<< Updated upstream
 
        <?php 
        if($_SESSION['nivel_admin']==0)
@@ -137,8 +136,6 @@ if (!empty($lista_produtos)) {
        }
        ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
-=======
->>>>>>> Stashed changes
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
         <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td>
@@ -151,7 +148,6 @@ if (!empty($lista_produtos)) {
 </body>
 <script src="jquery.js"></script>
 <script>
-<<<<<<< Updated upstream
 var variaveis = new URLSearchParams(location.search);
 var usuario = variaveis.get("usuario");
 console.log(usuario)
@@ -167,11 +163,4 @@ function ExcluirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
     window.open(url,"_blank");
 }
     </script>
-=======
-function ExcluirCarrinho(idcarrinho)
-{
-    window.open("ExcluirCarrinho.php?idcarrinho="+idcarrinho,"_self");
-}
-</script>
->>>>>>> Stashed changes
 </html>

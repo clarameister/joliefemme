@@ -211,8 +211,8 @@ input[type=text] {
 <body>
 
     <div class="retangulo1">
-        <a href="inicial.php"><img src="voltar.png" class="voltar"></a>
-        <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+        <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
+        <img onclick="busca_imagem();" id="imagem" src="pessoas.png" width="50px">
         <input type="file" id="meu_upload">
         <div class="frase"> Oiê!</div>
     </div>

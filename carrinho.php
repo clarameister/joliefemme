@@ -100,8 +100,8 @@ include("listar_carrinho.php");
 
 <body>
         <div class="retangulo1">
-        <a href="inicial.php"><img src="voltar.png" class="voltar"></a>
-                <img onclick="busca_imagem();" id="imagem" src="pesquisar.png" width="50px">
+        <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
+                <img onclick="busca_imagem();" id="imagem" src="pessoas.png" width="50px">
                 <input type="file" id="meu_upload">
                 <div class="frase"> Oi!! Esse é o seu carrinho</div>
         </div>
@@ -109,8 +109,13 @@ include("listar_carrinho.php");
 
 <table width="80%" border="1">
     <tr>
-
-
+    <?php
+         if($_SESSION['nivel_admin']==1)
+         {    
+            echo("<td> Idcliente</td>");
+         }
+        ?>
+       
         <td> Produto</td>
         <td> Quantidade</td>
         <td> Total (R$)</td>
@@ -122,6 +127,7 @@ include("listar_carrinho.php");
 if (!empty($lista_produtos)) {
               
     foreach ($lista_produtos as $linha) {?>
+<<<<<<< Updated upstream
         <tr class="tr">
 
        <?php 
@@ -136,10 +142,20 @@ if (!empty($lista_produtos)) {
        }
        ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
+=======
+        <tr class="tr"> 
+        <?php
+         if($_SESSION['nivel_admin']==1)
+         { 
+            $id_cliente=$linha['id_cliente'];
+            echo("<td class='td'> $id_cliente </td>");
+         }
+        ?>
+        
+>>>>>>> Stashed changes
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
-        <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td>
-       
+        <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td> 
         </tr>
     <?php }
 }
@@ -157,9 +173,9 @@ console.log(usuario)
     window.open(arquivo+"?usuario="+usuario,"_self")
 }
 
-function ExcluirCarrinho(idproduto,qtde,preco,idcliente,nome_produto)
+function ExcluirCarrinho(id)
 {
-    var url = "delcarrinho.php?;
+    var url = "ExcluirCarrinho.php?idcarrinho="+id;
     window.open(url,"_blank");
 }
     </script>

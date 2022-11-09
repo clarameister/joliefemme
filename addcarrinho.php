@@ -19,6 +19,6 @@ $comando->execute();
 
 ?>
 <script>
-alert("PRODUTO INSERIDO NO CARRINHO");
+
 window.close();
 </script>

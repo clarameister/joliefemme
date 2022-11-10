@@ -216,7 +216,7 @@ input[type=text] {
         <input type="file" id="meu_upload">
         <div class="frase"> Oiê!</div>
     </div>
-
+    
     <input type="submit" class="sair" value="Sair">
     <div class="tudo">
     <div class="conteudo">
@@ -291,7 +291,6 @@ function busca_imagem() {
 $(document).on("change", "#meu_upload", function(e) {
     showThumbnail(this.files);
 });
-
 function showThumbnail(files) {
     if (files && files[0]) {
         var reader = new FileReader();

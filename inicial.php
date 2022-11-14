@@ -104,7 +104,7 @@ body{
     text-align: center;
     align-content: center;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     justify-items: center;
 }
 .conteudo2
@@ -194,17 +194,11 @@ a:link
     </div>
 
     <div class="retangulo2">
-        &nbsp;<div>BLUSAS</div> <div>VESTIDOS</div> <div>SAIAS</div> <div>SHORTS</div> <div>CALÇAS</div> <div>CASACOS</div> <div>SAPATOS</div> <div>BOLSAS</div>
         
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <div>
+        <div id="cons">
             <a href="consultoria.html" class="link"> MARCAR UMA CONSULTA DE MODA </a>
         </div>
 
-        <input id="searchbar" onkeyup="search_items()" type="text" name="search" placeholder="Pesquisar..">
-
-        <img src="lupa.png" class="lupa">&nbsp;
     </div>
        
     <div class="conteudo2">

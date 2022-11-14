@@ -171,7 +171,7 @@ input {
     align-items: center;
     flex-direction: column;
     margin-top: 60px;
-    margin-left: 569px;
+    margin-left: 442px;
 }
 
 .campos {
@@ -181,7 +181,7 @@ input {
 
 .cont {
     margin-top: 140px;
-    margin-left: -620px;
+    margin-left: -554px;
 }
 
 input[type=text] {
@@ -231,10 +231,10 @@ input[type=text] {
      </div>
     </a>
 
-     <a href="pcadastroitens.html" class="link">
+     <a href="produtos.html" class="link">
      <div class="p">
      <img src="produtos.png" width="70%" >
-     Cadastrar Produtos
+     Gerenciar Produtos
     </div>
     </a>
 

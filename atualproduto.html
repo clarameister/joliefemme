@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: #F1D4D4;
+    overflow: hidden;
+    }
+    input[type="text"]{
+        border-color: white;
+        border-radius:15px;
+        border-style: solid;
+        width: 300px;
+        height: 20px;
+    }
+    #nome{
+        margin-top: 10px;
+    }
+    #preco{
+        margin-top: 10px;
+    }
+    #botao{
+        margin-top: 10px;
+        background-color: rgb(135,76,76);
+        border-color: rgb(135,76,76);
+        border-radius:15px;
+        border-style: solid;
+        width: 300px;
+        height: 20px;
+        color: white;
+    }
+</style>
+<body>
+    <form action="atualizarpreco.php" method="POST">
+        <div class="campos">
+            <input type="text" id="nome" name="nome_prod" placeholder="Nome produto"><br>
+            <input type="text" id="preco" name="preco" placeholder="Valor"><br>
+            <input type="submit" id="botao" value="Atualizar" class="redefinir">
+        </div>
+    </form>
+</body>
+</html>
+

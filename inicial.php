@@ -41,7 +41,6 @@ body{
     width:100%;
     height:100vh;
     margin:0%;
-    overflow: hidden;
 }
 .retangulo1
 {
@@ -225,7 +224,7 @@ a:link
     <div class="consul">
         <div class="escuro">
             <br>
-            <img src="bolsa.png" class="bolsa">
+            <img src="novidades.png" class="bolsa">
         <div class="frases">
                 ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR?
         </div>

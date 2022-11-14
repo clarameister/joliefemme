@@ -277,6 +277,7 @@ input[type=text] {
             </div>
         </form>
     </div>
+
 </div>
 </body>
 <script src="jquery.js"></script>

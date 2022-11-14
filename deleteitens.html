@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excluir produtos</title>
 </head>
+<style>
+    body{
+    background-color: #F1D4D4;
+    overflow: hidden;
+    }
+    input[type="text"]{
+        border-color: white;
+        border-radius:15px;
+        border-style: solid;
+        width: 300px;
+        height: 20px;
+    }
+    #nome{
+        margin-top: 10px;
+    }
+    #preco{
+        margin-top: 10px;
+    }
+    .botao {
+    margin-top: 10px;
+    background-color: rgb(135,76,76);
+    border-color: rgb(135,76,76);
+    border-radius: 15px;
+    border-style: solid;
+    width: 309px;
+    height: 25px;
+    color: white;
+    }
+    .voltar{
+        width: 40px;
+    }
+    .campos {
+    margin-top: 332px;
+    margin-left: 649px;
+    color: rgb(135,76,76);
+    font-size: 20px;
+    }
+</style>
 <body>
+    <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
     <form action="deleteitens.php" method="get">
         <div class="campos">
+            Insira:<br>
             <input type="text" name="nome_prod" placeholder="Nome do produto"><br>
             <a href="delitens.php?nome_prod=<?php echo $linha['nome_prod'];?>">
-            <button type="submit" class="btn-close" aria-label="Close"></button></a>
+            <button type="submit" class="botao"> Excluir </button></a>
         </div>
     </form>
     

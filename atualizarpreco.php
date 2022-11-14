@@ -1,7 +1,6 @@
 <?php
     include("conecta.php");
 
-
     $nome_prod = $_POST["nome_prod"];
     $preco = $_POST["preco"];
 

@@ -10,8 +10,10 @@
     <form action="deleteitens.php" method="get">
         <div class="campos">
             <input type="text" name="nome_prod" placeholder="Nome do produto"><br>
-            <input type="submit" value="Excluir" class="redefinir">
+            <a href="delitens.php?nome_prod=<?php echo $linha['nome_prod'];?>">
+            <button type="submit" class="btn-close" aria-label="Close"></button></a>
         </div>
     </form>
+    
 </body>
 </html>

@@ -113,13 +113,7 @@ include("listar_carrinho.php");
 
 <table width="80%" border="1">
     <tr>
-    <?php
-         if($_SESSION['nivel_admin']==1)
-         {    
-            //echo("<td> Idcliente </td>");
-         }
-        ?>
-       
+
         <td> Id Produto</td>
         <td> Nome Produto</td>
         <td> Quantidade</td>
@@ -133,18 +127,6 @@ if (!empty($lista_produtos)) {
               
     foreach ($lista_produtos as $linha) {?>
         <tr class="tr">
-
-       <?php 
-       if($_SESSION['nivel_admin']==0)
-       {
-            //$t1 = $linha["idcarrinho"];   
-            //$t2 = $linha["id_cliente"];
-            //echo("
-               //<td class='td'>$t1</td>
-               //<td class='td'>$t2</td>
-            //");
-       }
-       ?> 
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>

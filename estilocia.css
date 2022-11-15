@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Consultoria</title>
-    <link rel="stylesheet" href="estilocia.css">
-</head>
-<style>
-    body
+body
 {
     background-color: #F1D4D4;
     overflow: hidden;
@@ -37,7 +27,7 @@
 .quadrado
 {
     margin-left: 481px;
-    margin-top: 50px;
+    margin-top: 30px;
     
 }
 #voltar
@@ -163,46 +153,3 @@ input[type=date]
 {
     margin-left:120px;
 }
-</style>
-<body>
-    <div id="ret1">
-        <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
-        <div class="tit">JOLIE FEMME</div>
-    </div>
-    <form action="inserir2.php" method="post">
-       
-            <div class="quadrado">
-                <div id="consd">
-                    CONSULTORAS DISPONÍVEIS
-                </div>
-                <p>
-                    <select class="selecao">
-                        <option value="ams">Angela Marques da Silva</option>
-                        <option value="af">Alicia Fagundes</option>
-                        <option value="ans">Alessandra Nascimento Soares</option>
-                        <option value="ms">Martina Stoesch</option>
-                    </select>
-                </p>   
-            </div>
-            <div class="inputs">
-                <div id="dt">
-                    ESCOLHA UMA DATA:
-                </div>
-                <br>
-                <div id="data">
-                    <input type="date" min="2022-10-18" max="2022-12-31" id="dia" name="dia">
-                </div>
-                <div id="hr">
-                    MARCAR UM HORÁRIO:
-                </div>
-                <br>
-                <div id="horario">
-                    <input type="time" id="hora" name="hora">
-                </div>
-                </div>
-        </div>
-    </form>
-    </body>
-
-</script>
-</html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Consultoria</title>
     <link rel="stylesheet" href="estilocia.css">
+    <title>Consultoria</title>
 </head>
 <style>
     body
@@ -18,7 +18,7 @@
     background-color: #D39999;
     color: white;
     font-size: 25px;
-    height: 61px;
+    height: 100px;
     width: 1680px;
     margin-left: -19px;
     margin-top: -10px;
@@ -36,9 +36,8 @@
 }
 .quadrado
 {
-    margin-left: 481px;
-    margin-top: 50px;
-    
+    margin-left: 308px;
+    margin-top: 30px;
 }
 #voltar
 {
@@ -50,7 +49,7 @@
     background-color: #874C4C;
     color: white;
     font-size: 20px;
-   width: 430px;
+    width: 493px;
     height: 65px;
     display: flex;
     flex-direction: column;
@@ -60,8 +59,8 @@
 #ret2
 {
     background-color: #FFF3F3;
-    width: 430px;
-    height: 66px;
+    width: 493px;
+    height: 431px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,8 +68,8 @@
 }
 #dt
 {
-    margin-left: 825px;
-    margin-top: -711px;
+    margin-left: 700px;
+    margin-top: 14px;
     background-color: #874C4C;
     color: white;
     font-size: 20px;
@@ -108,7 +107,7 @@
 input[type=time]
 {
     width: 425px;
-    height: 27px;
+    height: 137px;
     background-color: white;
     color: #874C4C;
     border-style: solid;
@@ -119,7 +118,7 @@ input[type=time]
 input[type=date]
 {
     width: 425px;
-    height: 27px;
+    height: 137px;
     background-color: white;
     color: #874C4C;
     border-style: solid;
@@ -127,10 +126,8 @@ input[type=date]
     border-radius: 5px;
     font-size: 15px;
 }
-.agendar
+input[type=submit]
 {
-    margin-left: 482px;
-    margin-top: 420px;
     width: 425px;
     height: 80px;
     color: white;
@@ -139,70 +136,53 @@ input[type=date]
     border-color: #874C4C;
     border-radius: 5px;
     font-size: 15px;
+    margin-left: 600px;
+    margin-top: 43px;
 }
 .voltar
 {
     width: 40px;
     height: 40px;
-    margin-top: 38px;
+    margin-top: 20px;
     margin-left: -1587px;
 }
-.tit
-{
-    position: relative;
-    top: -40px;
-    left: -140px;
-}
-.inputs
-{
-    position: relative;
-    top: 709px;
-    left: -344px;
-}
-.selecao
-{
-    margin-left:120px;
-}
+
 </style>
 <body>
+   
     <div id="ret1">
         <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
-        <div class="tit">JOLIE FEMME</div>
+        JOLIE FEMME
     </div>
-    <form action="inserir2.php" method="post">
-       
-            <div class="quadrado">
-                <div id="consd">
-                    CONSULTORAS DISPONÍVEIS
-                </div>
-                <p>
-                    <select class="selecao">
-                        <option value="ams">Angela Marques da Silva</option>
-                        <option value="af">Alicia Fagundes</option>
-                        <option value="ans">Alessandra Nascimento Soares</option>
-                        <option value="ms">Martina Stoesch</option>
-                    </select>
-                </p>   
-            </div>
-            <div class="inputs">
-                <div id="dt">
-                    ESCOLHA UMA DATA:
-                </div>
-                <br>
-                <div id="data">
-                    <input type="date" min="2022-10-18" max="2022-12-31" id="dia" name="dia">
-                </div>
-                <div id="hr">
-                    MARCAR UM HORÁRIO:
-                </div>
-                <br>
-                <div id="horario">
-                    <input type="time" id="hora" name="hora">
-                </div>
-                </div>
+
+    <div class="quadrado">
+        <div id="consd">
+            CONSULTORAS DISPONÍVEIS
         </div>
+        <div id="ret2"></div>
+    </div>
+    <br>
+    <form action="inserir2.php" method="post">
+        <div class="inputs">
+            <div id="dt">
+                ESCOLHA UMA DATA:
+            </div>
+    <br>
+    <div id="data">
+        <input type="date" min="2022-10-18" max="2022-12-31" id="dia" name="dia">
+    </div>
+    <div id="hr">
+        MARCAR UM HORÁRIO:
+    </div>
+    <br>
+    <div id="horario">
+        <input type="time" id="hora" name="hora">
+    </div>
+    </div>
+    <input type="submit" value="MARCAR CONSULTA" id="mc"></input>
     </form>
-    </body>
+
+</body>
 
 </script>
 </html>

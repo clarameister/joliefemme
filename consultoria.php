@@ -215,5 +215,5 @@ input[type=submit]
 
 </body>
 
-</script>
+
 </html>

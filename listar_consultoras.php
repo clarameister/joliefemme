@@ -1,7 +1,7 @@
 <?php
 include("conecta.php");
 
-$comando = $pdo->prepare("SELECT id_consultora,nome_cons,email_cons,telefone_cons FROM consultoras ");
+$comando = $pdo->prepare("SELECT * FROM consultoras ");
 
 $comando->execute();
 

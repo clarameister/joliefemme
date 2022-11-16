@@ -174,16 +174,32 @@ input[type=submit]
             <table class="table">
             <tbody>
             <?php
-            include("listar_consultoras.php");
+            
+            include("conecta.php");
+            
+            $comando = $pdo->prepare("SELECT * FROM consultoras ");
+            
+            $comando->execute();
+            
+            if($comando->rowCount() >= 1)
+            {
+                $lista_consultoras = $comando->fetchAll();
+            }else{
+                echo("Não deu certo!");
+            }
+            
+              unset($comando);
+              unset($pdo);
+            
             
             if (!empty($lista_consultoras)) {
              
-                foreach ($lista_consultoras as $linha) { ?>
+                foreach($lista_consultoras as $linha) { ?>
                     <tr>
-                        <td><?php echo($linha['id_consultora']); ?></td>
-                        <td> <?php echo($linha['nome_cons']); ?> </td>
-                        <td> <?php echo($linha['email_cons']); ?></td>
-                        <td> <?php echo($linha['telefone_cons']); ?></td>
+                        <td><?php echo($linha["id_consultora"]); ?></td>
+                        <td> <?php echo($linha["nome_cons"]); ?> </td>
+                        <td> <?php echo($linha["email_cons"]); ?></td>
+                        <td> <?php echo($linha["telefone_cons"]); ?></td>
                     </tr>
             <?php }
             }

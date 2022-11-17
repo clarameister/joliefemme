@@ -43,11 +43,16 @@ body {
     margin-top: 46px;
     height: 1000px;
 }
-.sair {
-    background-color: rgb(222, 150, 150);
+#sair {
+    color: rgb(135, 76, 76);
+    display: flex;
     width: 100px;
     margin-top: -40px;
     margin-left: 1000px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .frase {
@@ -171,7 +176,7 @@ input {
     align-items: center;
     flex-direction: column;
     margin-top: 60px;
-    margin-left: 442px;
+    margin-left: 480px;
 }
 
 .campos {
@@ -180,8 +185,9 @@ input {
 }
 
 .cont {
-    margin-top: 140px;
-    margin-left: -554px;
+    position: relative;
+    top: 50px;
+    left: -363px;
 }
 
 input[type=text] {
@@ -193,7 +199,7 @@ input[type=text] {
     width: 441px;
     height: 25px;
     margin-top: 5px;
-    margin-left: -101px;
+    margin-left: -134px;
 }
 
 .redefinir {
@@ -205,6 +211,7 @@ input[type=text] {
     height: 25px;
     color: white;
     margin-top: 20px;
+    margin-left: -44px;
 }
 </style>
 
@@ -216,15 +223,14 @@ input[type=text] {
         <input type="file" id="meu_upload">
         <div class="frase"> Oiê!</div>
     </div>
-    
-    <input type="submit" class="sair" value="Sair">
+    <a href="sair.php" class="btn btn-primary btn-lg" id="sair" style="background-color: rgba(232, 207, 193, 1); border-color: rgba(232, 207, 193, 1); color:rgba(82, 62, 39, 1)"><input type="button" value="Sair" class="btn btn-primary btn-lg" id="botao" style="background-color: rgba(232, 207, 193, 1); border-color: rgba(232, 207, 193, 1); color:rgba(82, 62, 39, 1)"></a>
     <div class="tudo">
     <div class="conteudo">
-        <?php
+    <?php
     
     if($_SESSION['nivel_admin'] == 1){
         echo '
-        <a href="carrinho.php" class="link">
+        <a href="carrinho2.php" class="link">
         <div class="p">
         <img src="caixa.png" width="70%" >
         Pedidos
@@ -238,7 +244,7 @@ input[type=text] {
     </div>
     </a>
 
-    <a href="consultoria.html" class="link">
+    <a href="consultoria2.php" class="link">
     <div class="p" >
     <img src="calendario.png" width="60%">
     Consultorias
@@ -254,7 +260,7 @@ input[type=text] {
         Pedidos
      </div>
     </a>
-        <a href="consultoria.html" class="link">
+        <a href="consultoria.php" class="link">
         <div class="p">
         <img src="calendario.png" width="63%">
         Consultorias

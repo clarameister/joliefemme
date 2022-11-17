@@ -104,7 +104,7 @@ include("listar_carrinho.php");
 
 <body>
         <div class="retangulo1">
-        <a href="inicial.php"><img src="chevron.png" class="voltar"></a>
+        <a href="perfil.php"><img src="chevron.png" class="voltar"></a>
                 <img onclick="busca_imagem();" id="imagem" src="pessoas.png" width="50px">
                 <input type="file" id="meu_upload">
                 <div class="frase"> Oi!! Esse é o seu carrinho.</div>
@@ -131,7 +131,7 @@ if (!empty($lista_produtos)) {
         <td class="td"> <?php echo($linha['id_produto']);?> </td>
         <td class="td"> <?php echo($linha['nome_produto']);?> </td>
         <td class="td"> <?php echo($linha['quantidade']);?> </td>
-        <td class="td"> <?php echo($linha['total']);?> <button class="excluir" onclick="ExcluirCarrinho(<?php echo($linha['idcarrinho']); ?>);">X</button></td> 
+        <td class="td"> <?php echo($linha['total']);?> </td> 
         </tr>
     <?php }
 }

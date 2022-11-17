@@ -55,6 +55,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-left: 291px;
 }
 #ret2
 {
@@ -166,7 +167,17 @@ input[type=submit]
     color: #874C4C;
     background-color: #FFF0F5;
     font-size: 18px;
-    margin-top: -81px;
+    margin-top: -341px;
+    margin-left: 291px;
+    width: 403px;
+}
+.excluir {
+  color: #874C4C;
+  border-color: #874C4C;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
 }
 </style>
 <body>
@@ -184,7 +195,7 @@ input[type=submit]
     </div>
     <div class="quadrado">
         <div id="consd">
-            CONSULTORAS DISPONÍVEIS
+            CONSULTORIAS MARCADAS
         </div>
         <div id="ret2">
         <table width="80%" border="1" class="table">
@@ -193,28 +204,30 @@ input[type=submit]
             
             include("conecta.php");
             
-            $comando = $pdo->prepare("SELECT * FROM consultoras ");
+            $comando = $pdo->prepare("SELECT * FROM consultoria");
             
             $comando->execute();
             
             if($comando->rowCount() >= 1)
             {
-                $lista_consultoras = $comando->fetchAll();
+                $lista_consultorias = $comando->fetchAll();
             }else{
-                echo("Não deu certo!");
+                echo('');
             }
             
               unset($comando);
               unset($pdo);
             
             
-            if (!empty($lista_consultoras)) {
+            if (!empty($lista_consultorias)) {
              
-                foreach($lista_consultoras as $linha) { ?>
+                foreach($lista_consultorias as $linha) { ?>
                     <tr>
-                        <td class="td"> <?php echo($linha["nome_cons"]); ?> </td>
-                        <td class="td"> <?php echo($linha["email_cons"]); ?></td>
-                        <td class="td"> <?php echo($linha["telefone_cons"]); ?></td>
+                        <td class="td"> <?php echo($linha["idconsultoria"]); ?> </td>
+                        <td class="td"> <?php echo($linha["dia"]); ?></td>
+                        <td class="td"> <?php echo($linha["hora"]); ?></td>
+                        <td class="td"> <?php echo($linha["id_clientes"]); ?> </td>
+                        <td class="td"> <button class="excluir" onclick="ExcluirConsultoria(<?php echo($linha['idconsultoria']); ?>);">X</button></td>
                     </tr>
             <?php }
             }
@@ -225,26 +238,16 @@ input[type=submit]
     </div>
     <br>
     <form action="inserir2.php" method="post">
-        <div class="inputs">
-            <div id="dt">
-                ESCOLHA UMA DATA:
-            </div>
-    <br>
-    <div id="data">
-        <input type="date" min="2022-10-18" max="2022-12-31" id="dia" name="dia">
-    </div>
-    <div id="hr">
-        MARCAR UM HORÁRIO:
-    </div>
-    <br>
-    <div id="horario">
-        <input type="time" id="hora" name="hora">
-    </div>
-    </div>
-    <input type="submit" value="MARCAR CONSULTA" id="mc">
+
     </form>
 
 </body>
 
-
+<script>
+    function ExcluirConsultoria(id)
+{
+    var url = "ExcluirConsultoria.php?idconsultoria="+id;
+    window.open(url,"_blank");
+}
+</script>
 </html>

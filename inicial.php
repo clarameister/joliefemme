@@ -229,7 +229,7 @@ a:link
                 ESTÁ EM DÚVIDA SOBRE O QUE COMPRAR?
         </div>
         <div class="frases">
-                <a href="consultoria.html" class="link"> MARQUE UMA CONSULTA DE MODA! </a>
+                <a href="consultoria.php" class="link"> MARQUE UMA CONSULTA DE MODA! </a>
         </div>
         <div class="frases">
                 POR APENAS R$50,00 + FRETE

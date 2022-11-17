@@ -180,7 +180,7 @@ input {
 }
 
 .campos {
-    margin-left: 660px;
+    margin-left: 628px;
     margin-top: 50px;
 }
 
